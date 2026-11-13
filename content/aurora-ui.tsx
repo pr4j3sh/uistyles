@@ -16,8 +16,8 @@ export const auroraUi: StyleContent = {
     displayItalicLast: true,
     shadow: "0 22px 55px rgba(0,0,0,0.5), inset 0 1px 0 rgba(0,255,163,0.18)",
   },
-  what: "Aurora UI paints northern-light ribbons through a dark sky — flowing curtains of green, teal and violet over deep space. Every surface is a lens: translucent, luminous, slightly radioactive just at the edge of perception.",
-  origin: "Crystallized around 2021–22 from Datadog/Stripe 'mesh gradient' marketing sites and the iridescent WebGL shader wave — the aurora borealis as a color system, not a metaphor.",
+  what: "Aurora UI paints northern-light ribbons through a dark sky: flowing curtains of green, teal and violet over deep space. Every surface is a lens, translucent and luminous, slightly radioactive at the edge of perception.",
+  origin: "It crystallized around 2021 and 2022 from mesh-gradient marketing sites at Datadog and Stripe and the iridescent WebGL shader wave. The aurora borealis became a color system, not a metaphor.",
   bestFor: [
     "Developer tools and observability",
     "AI and data products that feel alive",
@@ -30,23 +30,23 @@ export const auroraUi: StyleContent = {
     "Print-adjacent editorial products",
   ],
   palette: [
-    { name: "Abyss", hex: "#04101F", role: "Night canvas — polar sky" },
-    { name: "Green", hex: "#00FFA3", role: "Auroral emission — primary" },
-    { name: "Teal", hex: "#00D4FF", role: "Mid curtain — secondary" },
-    { name: "Violet", hex: "#B967FF", role: "Sub-auroral glow — deep field" },
+    { name: "Abyss", hex: "#04101F", role: "Night canvas, polar sky" },
+    { name: "Green", hex: "#00FFA3", role: "Auroral emission, primary" },
+    { name: "Teal", hex: "#00D4FF", role: "Mid curtain, secondary" },
+    { name: "Violet", hex: "#B967FF", role: "Sub-auroral glow, deep field" },
     { name: "Ice", hex: "#EAF6FF", role: "Starfield text" },
     { name: "Mute", hex: "rgba(234,246,255,0.55)", role: "Subsurface text" },
   ],
   typography: [
-    { role: "Display", family: "Inter — 500 / 600", note: "36–56px, tight tracking, normal weight — aurora whispers, never shouts." },
-    { role: "Body", family: "Inter — 400 / 500", note: "14–15px/1.5. Always weight 500 on dark starfield — thin strokes dissolve." },
-    { role: "Spec", family: "JetBrains Mono — 9–11px", note: "Observatory callouts: KVPT / 042 / WAVEFORM. Tracked caps, ice-green." },
+    { role: "Display", family: "Inter, 500 / 600", note: "36 to 56px, tight tracking, normal weight. Aurora whispers, never shouts." },
+    { role: "Body", family: "Inter, 400 / 500", note: "14-15px/1.5. Always weight 500 on dark starfield; thin strokes dissolve." },
+    { role: "Spec", family: "JetBrains Mono, 9-11px", note: "Observatory callouts: KVPT / 042 / WAVEFORM. Tracked caps, ice-green." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "A green photon traveling through the sky. Transparent fill with an aurora keyline, glow trailing behind — the rare button that glows AND reads.",
+        "A green photon traveling through the sky. Transparent fill with an aurora keyline and a glow trailing behind. The rare button that glows and still reads.",
       code: `export const PrimaryButton = () => (
   <button className="h-12 rounded-full border border-[#00FFA3]/40 bg-[rgba(0,255,163,0.08)] px-6 text-sm font-semibold text-[#00FFA3] shadow-[0_0_24px_rgba(0,255,163,0.3),inset_0_1px_0_rgba(0,255,163,0.3)] transition-shadow hover:shadow-[0_0_40px_rgba(0,255,163,0.5),inset_0_1px_0_rgba(0,255,163,0.45)]">
     Get started
@@ -65,7 +65,7 @@ export const auroraUi: StyleContent = {
     {
       name: "Input",
       description:
-        "A subsurface lens. Frosted well, green caret, hairline keyline that brightens on focus like a ripple catching light under ice.",
+        "A subsurface lens. Frosted well, green caret, a hairline keyline that brightens on focus like a ripple catching light under ice.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-mono text-[9px] uppercase tracking-[0.3em] text-[rgba(234,246,255,0.5)]">Email</span>
@@ -93,7 +93,7 @@ export const auroraUi: StyleContent = {
     {
       name: "Badge",
       description:
-        "A pinprick of auroral emission. Tiny, perfectly round, green-on-dark — an observatory star marker, not a tag.",
+        "A pinprick of auroral emission. Tiny, perfectly round, green on dark. An observatory star marker, not a tag.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,255,163,0.4)] bg-[rgba(0,255,163,0.08)] px-3.5 py-1.5 font-mono text-[9px] uppercase tracking-[0.3em] text-[#00FFA3] shadow-[inset_0_1px_0_rgba(0,255,163,0.3)]">
     Stable
@@ -114,7 +114,7 @@ export const auroraUi: StyleContent = {
     {
       name: "Card",
       description:
-        "A panel of polar ice over the aurora field. 5% white frost, green specular lip, deep shadow trailing the violet curtain — text stays 500 weight.",
+        "A panel of polar ice over the aurora field. Five percent white frost, green specular lip, a deep shadow trailing the violet curtain. Text stays at 500 weight.",
       code: `export const ChangelogCard = () => (
   <div className="w-64 rounded-2xl border border-[rgba(0,255,163,0.16)] bg-[rgba(255,255,255,0.05)] p-6 shadow-[0_14px_36px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(0,255,163,0.22)] backdrop-blur-xl">
     <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[rgba(234,246,255,0.5)]">CHNG / 002</p>
@@ -136,7 +136,7 @@ export const auroraUi: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "A aurora-glass navigation rail — heavy-blur translucent band, green wordmark dot, tracked-ice links. The bar stays out of the way of the show.",
+        "An aurora-glass navigation rail: heavy-blur translucent band, green wordmark dot, tracked ice links. The bar stays out of the way of the show.",
       code: `export const NavBar = () => (
   <header className="flex h-16 w-full items-center justify-between border-b border-[rgba(0,255,163,0.14)] bg-[rgba(255,255,255,0.04)] px-4 shadow-[0_8px_28px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(0,255,163,0.2)] backdrop-blur-2xl">
     <span className="pl-2 text-lg font-semibold tracking-tight text-[#EAF6FF]">acme<span className="text-[#00FFA3]">.</span></span>
@@ -169,15 +169,15 @@ export const auroraUi: StyleContent = {
     },
   ],
   dos: [
-    "One emission hue + one deep-field hue + ice text — restraint inside abundance",
-    "Layer your gradients — radial + linear, two layers minimum, three max",
-    "backdrop-blur ≥ 20px — aurora haze is vapor, not smudge",
-    "Specular lips on every glass surface — the polar sky reflects on ice",
+    "One emission hue, one deep-field hue and ice text. Restraint inside abundance.",
+    "Layer your gradients: radial and linear, two layers minimum, three max.",
+    "Use backdrop-blur of 20px or more. Aurora haze is vapor, not smudge.",
+    "Put a specular lip on every glass surface. The polar sky reflects on ice.",
   ],
   donts: [
-    "Don't use flat fills where a gradient exists — auroras are never flat",
-    "Don't add a fourth hue — green / teal / violet; stop there",
-    "Don't use white text on light cyan — emission peaks at green, not white",
-    "Don't place body copy on the bright lobe without a frost backing",
+    "Don't use flat fills where a gradient exists. Auroras are never flat.",
+    "Don't add a fourth hue. Green, teal, violet; stop there.",
+    "Don't use white text on light cyan. Emission peaks at green, not white.",
+    "Don't place body copy on the bright lobe without a frost backing.",
   ],
 };

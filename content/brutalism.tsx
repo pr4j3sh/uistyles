@@ -14,8 +14,8 @@ export const brutalism: StyleContent = {
     display: "font-mono font-black uppercase leading-[0.9] tracking-[-0.03em]",
     displayItalicLast: false,
   },
-  what: "Brutalism is the web without the styling layer — system fonts, hard black rules, browser-blue underlined links, borders that bite, type at full volume. It refuses the apologetic polish of modern UI in favor of raw, honest, sometimes ugly information.",
-  origin: "From Béton brut ('raw concrete') architecture to the 1994 default web — then a full revival from 2014 onward as a rejection of tasteful corporate design (brutalistwebsites.com, pool.io, the manifestos of the 2010s art scenes).",
+  what: "Brutalism is the web without the styling layer: system fonts, hard black rules, browser-blue underlined links, borders that bite, type at full volume. It refuses the apologetic polish of modern UI in favor of raw, direct, sometimes ugly information.",
+  origin: "It runs from Béton brut, or raw concrete, architecture to the default web of 1994, then had a full revival from 2014 onward as a rejection of tasteful corporate design. Brutalist websites, pool.io and the manifestos of the 2010s art scenes led the way.",
   bestFor: [
     "Design portfolios and personal sites",
     "Manifestos, zines and underground publishing",
@@ -28,23 +28,23 @@ export const brutalism: StyleContent = {
     "Anything needing warmth or softness",
   ],
   palette: [
-    { name: "Paper", hex: "#F2F0EA", role: "Ground — uncoated newsprint" },
-    { name: "Ink", hex: "#0A0A0A", role: "Rules & type" },
-    { name: "Link", hex: "#0000EE", role: "Links — the one color" },
+    { name: "Paper", hex: "#F2F0EA", role: "Ground, uncoated newsprint" },
+    { name: "Ink", hex: "#0A0A0A", role: "Rules and type" },
+    { name: "Link", hex: "#0000EE", role: "Links, the one color" },
     { name: "Gray", hex: "#55554F", role: "Secondary text" },
     { name: "Tint", hex: "#E7E5DE", role: "Sunken panels" },
     { name: "White", hex: "#FFFFFF", role: "Raised blocks" },
   ],
   typography: [
-    { role: "Display", family: "JetBrains Mono — 700 / 900", note: "Headlines set uppercase at full weight. System mono is the whole aesthetic — no display faces allowed." },
-    { role: "Body", family: "JetBrains Mono — 400 / 500", note: "13–15px/1.5. Reads like a terminal, which is the point." },
-    { role: "Metadata", family: "JetBrains Mono — 9–11px", note: "Photo credits, timestamps, spec strings. Always prefixed with #, /, or //." },
+    { role: "Display", family: "JetBrains Mono, 700 / 900", note: "Headlines set uppercase at full weight. System mono is the aesthetic, and no display faces are allowed." },
+    { role: "Body", family: "JetBrains Mono, 400 / 500", note: "13-15px/1.5. Reads like a terminal, which is the point." },
+    { role: "Metadata", family: "JetBrains Mono, 9-11px", note: "Photo credits, timestamps, spec strings. Always prefixed with #, /, or //." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "The unstyled element, elevated by intention. 2px border, white fill, black text — on hover the fill flips to black like a printer's registration mark toggling.",
+        "The unstyled element, elevated by intention. A 2px border, white fill, black text; on hover the fill flips to black like a printer's registration mark toggling.",
       code: `export const PrimaryButton = () => (
   <button className="border-2 border-[#0A0A0A] bg-white px-6 py-3 font-mono text-sm font-bold uppercase tracking-[0.08em] text-[#0A0A0A] transition-colors hover:bg-[#0A0A0A] hover:text-[#F2F0EA]">
     Get started
@@ -91,7 +91,7 @@ export const brutalism: StyleContent = {
     {
       name: "Badge",
       description:
-        "A price tag off a slaughterhouse clipboard. 1px border, mono caps, no fill — the kind of chip you tape to a corkboard.",
+        "A price tag off a slaughterhouse clipboard. A 1px border, mono caps, no fill. The kind of chip you tape to a corkboard.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 border border-[#0A0A0A] bg-transparent px-2 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.25em] text-[#0A0A0A]">
     # STABLE
@@ -115,7 +115,7 @@ export const brutalism: StyleContent = {
     {
       name: "Card",
       description:
-        "Stacked bordered blocks, divider rules where fields would normally round. A headline reaching toward the edge, mono body beneath.",
+        "Stacked bordered blocks, with divider rules where fields would normally round. A headline reaches toward the edge, mono body beneath.",
       code: `export const ChangelogCard = () => (
   <article className="w-64 border-2 border-[#0A0A0A] bg-white">
     <div className="border-b-2 border-[#0A0A0A] bg-[#0A0A0A] px-3 py-1.5">
@@ -145,7 +145,7 @@ export const brutalism: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "Nineteen ninety-four, redux: underlined blue links, slash separators, one thick black rule across the top. No logo — words do all the branding.",
+        "Nineteen ninety-four, redux: underlined blue links, slash separators, one thick black rule across the top. No logo; words do all the branding.",
       code: `export const NavBar = () => (
   <header className="w-full border-t-4 border-[#0A0A0A] bg-[#F2F0EA] pt-3">
     <nav className="flex items-baseline justify-between px-4">
@@ -182,15 +182,15 @@ export const brutalism: StyleContent = {
     },
   ],
   dos: [
-    "Use system mono and system sans — no display faces, ever",
-    "1–2px hard black borders — no blur, no radius, no shadow",
-    "Underline links in default blue; visited goes purple",
-    "Type at full weight, full size — shouting is the point",
+    "Use system mono and system sans. No display faces, ever.",
+    "Use 1 to 2px hard black borders. No blur, no radius, no shadow.",
+    "Underline links in default blue; visited goes purple.",
+    "Set type at full weight and full size. Shouting is the point.",
   ],
   donts: [
-    "Don't round corners, blur anything or soften type",
-    "Don't center text unless you're doing it on purpose",
-    "Don't add icons — 1994 didn't have them and it was fine",
-    "Don't be tasteful — brutalism is not an aesthetic, it's a position",
+    "Don't round corners, blur anything or soften type.",
+    "Don't center text unless you're doing it on purpose.",
+    "Don't add icons. 1994 didn't have them and it was fine.",
+    "Don't be tasteful. Brutalism takes a position.",
   ],
 };

@@ -55,7 +55,7 @@ export function Sidebar() {
         collapsed ? "w-16" : "w-72"
       }`}
     >
-      {/* collapse toggle — rides the border edge */}
+      {/* collapse toggle: rides the border edge */}
       <button
         type="button"
         onClick={toggle}
@@ -92,7 +92,7 @@ export function Sidebar() {
           data-cursor
           data-cursor-label="Home"
           className="group block"
-          title="uistyles — home"
+          title="uistyles home"
         >
           {collapsed ? (
             <span className="block text-center font-serif text-[26px] leading-none text-paper">
@@ -109,7 +109,7 @@ export function Sidebar() {
                 </span>
               </div>
               <p className="mt-2 font-mono text-[10px] uppercase leading-relaxed tracking-[0.18em] text-muted">
-                The UI Style Index — 30 styles,
+                The UI Style Index: 30 styles,
                 <br />
                 one language.
               </p>

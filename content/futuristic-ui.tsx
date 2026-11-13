@@ -16,8 +16,8 @@ export const futuristicUi: StyleContent = {
     displayItalicLast: false,
     shadow: "0 24px 64px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.07)",
   },
-  what: "Futuristic UI is a calm heads-up display — deep space navy, frosted glass panels, hairline cyan instrumentation, and data that reads as telemetry. It suggests capability without shouting: the future as a quiet, well-run control room.",
-  origin: "Inherited from 2000s sci-fi film HUDs (*Minority Report*, *Iron Man*) and aerospace glass cockpits, then refined by 2020s AR interfaces (visionOS) into thin lines, translucency and restrained glow.",
+  what: "Futuristic UI is a calm heads-up display: deep space navy, frosted glass panels, hairline cyan instrumentation, and data that reads as telemetry. It suggests capability without shouting, the future as a quiet, well-run control room.",
+  origin: "It inherits from 2000s sci-fi film HUDs (Minority Report, Iron Man) and aerospace glass cockpits, then was refined by 2020s AR interfaces like visionOS into thin lines, translucency and restrained glow.",
   bestFor: [
     "Spatial and AR-adjacent products",
     "AI, robotics and deep-tech platforms",
@@ -30,23 +30,23 @@ export const futuristicUi: StyleContent = {
     "Regulated forms where clarity beats atmosphere",
   ],
   palette: [
-    { name: "Space", hex: "#05070E", role: "Canvas — deep orbital navy" },
-    { name: "Glass", hex: "#121C30", role: "Panel — frosted substrate" },
-    { name: "Ion", hex: "#5EE7FF", role: "Accent — instrumentation" },
-    { name: "Nova", hex: "#7C5CFF", role: "Secondary emission — violet" },
-    { name: "Signal", hex: "#E6F4FF", role: "Primary text — cold white" },
-    { name: "Telemetry", hex: "#7E93AD", role: "Secondary data — dim steel" },
+    { name: "Space", hex: "#05070E", role: "Canvas, deep orbital navy" },
+    { name: "Glass", hex: "#121C30", role: "Panel, frosted substrate" },
+    { name: "Ion", hex: "#5EE7FF", role: "Accent, instrumentation" },
+    { name: "Nova", hex: "#7C5CFF", role: "Secondary emission, violet" },
+    { name: "Signal", hex: "#E6F4FF", role: "Primary text, cold white" },
+    { name: "Telemetry", hex: "#7E93AD", role: "Secondary data, dim steel" },
   ],
   typography: [
-    { role: "Display", family: "Inter — 400 / 500", note: "40–64px, tight tracking, light weight. Authority is quiet, never bold." },
-    { role: "Body", family: "Inter — 400 / 500", note: "14–15px/1.6. Cold white on navy; never pure white." },
-    { role: "Spec", family: "JetBrains Mono — 9–11px", note: "Telemetry: ORBIT / 24.6 / SYS-NOMINAL — uppercase, wide tracking." },
+    { role: "Display", family: "Inter, 400 / 500", note: "40 to 64px, tight tracking, light weight. Authority is quiet, never bold." },
+    { role: "Body", family: "Inter, 400 / 500", note: "14-15px/1.6. Cold white on navy; never pure white." },
+    { role: "Spec", family: "JetBrains Mono, 9-11px", note: "Telemetry: ORBIT / 24.6 / SYS-NOMINAL. Uppercase, wide tracking." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "A glass capsule with an ion rim — translucent cyan fill, inner top highlight, soft halo. Hover raises the fill, never the glow.",
+        "A glass capsule with an ion rim: translucent cyan fill, inner top highlight, soft halo. Hover raises the fill, never the glow.",
       code: `export const PrimaryButton = () => (
   <button className="h-11 rounded-full border border-[#5EE7FF]/60 bg-[#5EE7FF]/10 px-6 text-sm font-medium text-[#5EE7FF] shadow-[0_0_24px_rgba(94,231,255,0.18),inset_0_1px_0_rgba(255,255,255,0.15)] backdrop-blur-md transition-colors hover:bg-[#5EE7FF]/20">
     Get started
@@ -67,7 +67,7 @@ export const futuristicUi: StyleContent = {
     {
       name: "Input",
       description:
-        "An instrumentation field — glass well, hairline rim, mono value in ion cyan. Focus tightens the rim to full opacity instead of blooming.",
+        "An instrumentation field: glass well, hairline rim, mono value in ion cyan. Focus tightens the rim to full opacity instead of blooming.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-mono text-[9px] uppercase tracking-[0.28em] text-[#7E93AD]">Operator ID</span>
@@ -95,7 +95,7 @@ export const futuristicUi: StyleContent = {
     {
       name: "Badge",
       description:
-        "A status beacon — pill, hairline rim, one pulsing dot. Ion cyan means nominal; violet means standby. No iconography needed.",
+        "A status beacon: pill, hairline rim, one pulsing dot. Ion cyan means nominal; violet means standby. No iconography needed.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 rounded-full border border-[#5EE7FF]/30 bg-[#5EE7FF]/10 px-3 py-1 font-mono text-[9px] uppercase tracking-[0.28em] text-[#5EE7FF]">
     <span className="h-1.5 w-1.5 rounded-full bg-[#5EE7FF] shadow-[0_0_8px_#5EE7FF]" />
@@ -119,7 +119,7 @@ export const futuristicUi: StyleContent = {
     {
       name: "Card",
       description:
-        "A telemetry panel — frosted glass, hairline rim, mono heading row and two live readouts. Data is arranged like a cockpit gauge, not a marketing card.",
+        "A telemetry panel: frosted glass, hairline rim, mono heading row and two live readouts. Data is arranged like a cockpit gauge, not a marketing card.",
       code: `export const ChangelogCard = () => (
   <article className="w-64 rounded-xl border border-[#5EE7FF]/25 bg-[#121C30]/80 p-4 shadow-[0_20px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl">
     <div className="flex items-center justify-between font-mono text-[8px] uppercase tracking-[0.3em] text-[#7E93AD]">
@@ -153,7 +153,7 @@ export const futuristicUi: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "A command rail — glass strip, hairline base, tracked mono wordmark and a live link indicator. It reads as equipment, not as a website header.",
+        "A command rail: glass strip, hairline base, tracked mono wordmark and a live link indicator. It reads as equipment, not as a website header.",
       code: `export const NavBar = () => (
   <header className="flex h-12 w-full items-center justify-between border-b border-[#5EE7FF]/20 bg-[#0A1220]/70 px-4 backdrop-blur-xl">
     <span className="font-mono text-[12px] font-medium uppercase tracking-[0.3em] text-[#E6F4FF]">Orbital<span className="text-[#5EE7FF]">/</span></span>
@@ -188,15 +188,15 @@ export const futuristicUi: StyleContent = {
     },
   ],
   dos: [
-    "Hairlines carry structure — 1px ion rims, never thick borders",
-    "Glass panels need a background worth blurring; keep atmosphere alive",
-    "Mono for all telemetry — numbers should look measured",
-    "One accent family: ion cyan for nominal, violet for standby",
+    "Hairlines carry structure: 1px ion rims, never thick borders.",
+    "Glass panels need a background worth blurring. Keep atmosphere alive.",
+    "Use mono for all telemetry. Numbers should look measured.",
+    "One accent family: ion cyan for nominal, violet for standby.",
   ],
   donts: [
-    "Don't stack glows — halos are for beacons, not for paragraphs",
-    "Don't use pure white text — #E6F4FF keeps the cold depth",
-    "Don't animate everything — motion is a status signal, not decoration",
-    "Don't mix in warm colors — the palette lives between 200 and 270 degrees",
+    "Don't stack glows. Halos are for beacons, not for paragraphs.",
+    "Don't use pure white text. #E6F4FF keeps the cold depth.",
+    "Don't animate everything. Motion is a status signal, not decoration.",
+    "Don't mix in warm colors. The palette lives between 200 and 270 degrees.",
   ],
 };

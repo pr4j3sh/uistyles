@@ -24,11 +24,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "uistyles — The UI Style Index",
-    template: "%s — uistyles",
+    default: "uistyles: The UI Style Index",
+    template: "%s | uistyles",
   },
   description:
-    "A visual index of 30 UI design styles. Learn the basics of each style — palette, typography, principles — and copy the Tailwind classes for its core components.",
+    "A visual index of 30 UI design styles. Learn the basics of each style (palette, typography, principles) and copy the Tailwind classes for its core components.",
 };
 
 export const viewport = {

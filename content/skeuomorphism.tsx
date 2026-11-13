@@ -15,8 +15,8 @@ export const skeuomorphism: StyleContent = {
     displayItalicLast: false,
     shadow: "0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.25)",
   },
-  what: "Skeuomorphism makes the digital object look like its physical ancestor — linen texture on the canvas, brushed metal on chrome, aqua-lacquer buttons with a specular highlight, paper stock for documents. Depth, material and light do the affording; words come second.",
-  origin: "The language of pre-flat Apple — OS X Aqua (2001), iOS 1–6 (2007–2013) — built to teach desktop newcomers by mimicking real objects: calendar stitches, green leather contacts, linen backgrounds. Apple killed it with iOS 7, flat design proving interfaces needed no ancestors.",
+  what: "Skeuomorphism makes the digital object look like its physical ancestor: linen texture on the canvas, brushed metal on chrome, aqua-lacquer buttons with a specular highlight, paper stock for documents. Depth, material and light do the affording; words come second.",
+  origin: "It was the language of pre-flat Apple: OS X Aqua in 2001 and iOS 1 through 6 from 2007 to 2013. It taught desktop newcomers by mimicking real objects, with calendar stitches, green leather contacts and linen backgrounds. Apple killed it with iOS 7, and flat design proved interfaces needed no ancestors.",
   bestFor: [
     "Nostalgia and retro product brands",
     "Toy-like, playful interfaces and games",
@@ -30,23 +30,23 @@ export const skeuomorphism: StyleContent = {
     "Anything needing long-term maintenance",
   ],
   palette: [
-    { name: "Linen", hex: "#E8E4DF", role: "Canvas — woven stock" },
+    { name: "Linen", hex: "#E8E4DF", role: "Canvas, woven stock" },
     { name: "Paper", hex: "#FBF8F3", role: "Document surfaces" },
     { name: "Meta", hex: "#B9B9BE", role: "Brushed metal chrome" },
     { name: "Aqua", hex: "#1D6FCB", role: "Action lacquer" },
-    { name: "Ink", hex: "#26221C", role: "Type & hairlines" },
+    { name: "Ink", hex: "#26221C", role: "Type and hairlines" },
     { name: "Leather", hex: "#8A5A2B", role: "Leather accents" },
   ],
   typography: [
-    { role: "Body / UI", family: "Helvetica Neue / Arial — 400 / 700", note: "Helvetica was Apple's house voice here; bold white over aqua with a soft text-shadow." },
-    { role: "Display", family: "Instrument Serif — 400 / italic", note: "For document mastheads and 'printed' moments — serif here reads as paper." },
-    { role: "Metadata", family: "JetBrains Mono — 9–11px", note: "Engraved label style for tactile controls. Uppercase, tracked." },
+    { role: "Body / UI", family: "Helvetica Neue / Arial, 400 / 700", note: "Helvetica was Apple's house voice here. Bold white over aqua with a soft text-shadow." },
+    { role: "Display", family: "Instrument Serif, 400 italic", note: "For document mastheads and 'printed' moments. Serif here reads as paper." },
+    { role: "Metadata", family: "JetBrains Mono, 9-11px", note: "Engraved label style for tactile controls. Uppercase, tracked." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "The Aqua slab. A vertical blue gradient with a specular line across the top third, a darkening bottom edge, white bold text with a soft shadow — and a press that physically displaces.",
+        "The Aqua slab: a vertical blue gradient with a specular line across the top third, a darkening bottom edge, white bold text with a soft shadow, and a press that physically displaces.",
       code: `export const PrimaryButton = () => (
   <button
     className="h-11 rounded-xl border border-[#0A4A8A] bg-gradient-to-b from-[#8FCBF9] via-[#2E8CD6] to-[#1A5FA8] px-6 text-sm font-bold text-white shadow-[0_2px_4px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.7)] transition-all [text-shadow:0_-1px_0_rgba(0,0,0,0.45)] hover:from-[#A8D7FC] hover:via-[#3A97DE] hover:to-[#1D6FCB] active:from-[#1661A8] active:to-[#0F4E85] active:shadow-[0_1px_2px_rgba(0,0,0,0.4),inset_0_2px_4px_rgba(0,0,0,0.5)]"
@@ -71,7 +71,7 @@ export const skeuomorphism: StyleContent = {
     {
       name: "Input",
       description:
-        "An inset glass well. A hard inner shadow bites the top-left, a single bottom-right highlight rims it, and anything typed sinks below the surface.",
+        "An inset glass well. A hard inner shadow bites the top left, a single bottom-right highlight rims it, and anything typed sinks below the surface.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-mono text-[9px] uppercase tracking-[0.3em] text-[#3F3A30] [text-shadow:0_1px_0_rgba(255,255,255,0.8)]">Email</span>
@@ -99,7 +99,7 @@ export const skeuomorphism: StyleContent = {
     {
       name: "Badge",
       description:
-        "A stitched leather tag. Dashed inner border, warm brown hide, pale stitch marks — the calendar's secret family tree.",
+        "A stitched leather tag: dashed inner border, warm brown hide, pale stitch marks. It is the calendar's secret family tree.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 rounded-sm border-2 border-dashed border-[#C9A87C] bg-gradient-to-b from-[#A8754A] to-[#7A5025] px-3 py-1.5 font-mono text-[9px] font-bold uppercase tracking-[0.3em] text-[#FBF1DE] [text-shadow:0_1px_1px_rgba(0,0,0,0.6)]">
     Stable
@@ -120,7 +120,7 @@ export const skeuomorphism: StyleContent = {
     {
       name: "Card",
       description:
-        "Heavyweight paper under a real drop shadow. Deckle edge via a double border and a serif masthead feel — a document you can lift.",
+        "Heavyweight paper under a real drop shadow. A deckle edge via a double border and a serif masthead feel, like a document you can lift.",
       code: `export const ChangelogCard = () => (
   <div className="w-64 border-2 border-[#C9C3B8] bg-[#FBF8F3] p-6 shadow-[0_6px_18px_rgba(0,0,0,0.35),inset_0_1px_0_#FFFFFF] [background-image:repeating-linear-gradient(0deg,transparent_0_3px,rgba(0,0,0,0.015)_3px_4px)]">
     <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#7A7265]">Changelog</p>
@@ -175,15 +175,15 @@ export const skeuomorphism: StyleContent = {
     },
   ],
   dos: [
-    "Pick ONE material per surface and rendered honestly — linen, metal, lacquer or paper",
-    "Light source above 10-o'clock — highlights on top, shade below, always",
-    "Press states must physically displace, not merely darken",
-    "Use CSS gradients for textures — never stock photos",
+    "Pick one material per surface and commit to it: linen, metal, lacquer or paper.",
+    "Keep the light source above 10 o'clock. Highlights on top, shade below, always.",
+    "Press states must physically displace, not merely darken.",
+    "Use CSS gradients for textures, never stock photos.",
   ],
   donts: [
-    "Don't mix more than two materials on one screen",
-    "Don't use photos of real linen/leather/wood — gradients, not images",
-    "Don't add thin drop shadows — skeuomorph drops belong deep",
-    "Don't use flat hover states — press, don't glow",
+    "Don't mix more than two materials on one screen.",
+    "Don't use photos of real linen, leather or wood. Gradients, not images.",
+    "Don't add thin drop shadows. Skeuomorph drops belong deep.",
+    "Don't use flat hover states. Press, don't glow.",
   ],
 };

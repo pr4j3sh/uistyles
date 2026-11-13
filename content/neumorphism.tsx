@@ -15,8 +15,8 @@ export const neumorphism: StyleContent = {
     displayItalicLast: false,
     shadow: "-9px -9px 18px #ffffff, 9px 9px 18px #a3b1c6",
   },
-  what: "Neumorphism renders interfaces as extruded plastic — the background and the surface are the SAME color, and depth comes entirely from a top-left highlight shadow and a bottom-right shade shadow. Buttons rest raised, wells sit inset, and nothing ever detaches from the page.",
-  origin: "A 2019 Dribbble revival (Adam Morse, Alex Palluco, the 'neumorphism' generators) of the soft-skeuomorph experiments that had been circulating since early CSS shadows — peaked 2019–20 and remains the most misused aesthetic in modern UI.",
+  what: "Neumorphism renders interfaces as extruded plastic. The background and the surface share the same color, and depth comes entirely from a top-left highlight shadow and a bottom-right shade shadow. Buttons rest raised, wells sit inset, and nothing ever detaches from the page.",
+  origin: "It was a 2019 Dribbble revival, led by Adam Morse, Alex Palluco and a wave of 'neumorphism' generators, built on soft-skeuomorph experiments that had circulated since the early CSS shadow days. It peaked in 2019 and 2020 and remains one of the most misused looks in modern UI.",
   bestFor: [
     "Portfolio showcases and design reels",
     "Single-card hero sections",
@@ -25,28 +25,28 @@ export const neumorphism: StyleContent = {
   ],
   avoid: [
     "Dense product interfaces",
-    "Accessibility-critical paths (contrast fails are endemic)",
+    "Accessibility-critical paths (contrast failures are common)",
     "Pages with more than two depth levels",
     "Content-first reading contexts",
   ],
   palette: [
-    { name: "Surface", hex: "#E0E5EC", role: "Canvas — same as background" },
+    { name: "Surface", hex: "#E0E5EC", role: "Canvas, same as background" },
     { name: "Ink", hex: "#4A4A4A", role: "Primary text" },
     { name: "Shade", hex: "#A3B1C6", role: "Bottom-right shadow" },
     { name: "Highlight", hex: "#FFFFFF", role: "Top-left shadow" },
     { name: "Muted", hex: "#8F9BA8", role: "Secondary text" },
-    { name: "Indigo", hex: "#6C63FF", role: "Single accent — pressed state" },
+    { name: "Indigo", hex: "#6C63FF", role: "Single accent, pressed state" },
   ],
   typography: [
-    { role: "Body / UI", family: "Nunito — 400 / 600 / 700", note: "Rounded terminals are the style. Set 14–16px; avoid weight 800+." },
-    { role: "Display", family: "Nunito — 600", note: "Headlines at 40–64px, soft tracking; never uppercase unless brief." },
-    { role: "Spec", family: "JetBrains Mono — 9–11px", note: "Shadow values and token names. Kickers uppercase, wide tracking." },
+    { role: "Body / UI", family: "Nunito, 400 / 600 / 700", note: "Rounded terminals are the style. Set 14-16px and avoid weight 800 and above." },
+    { role: "Display", family: "Nunito, 600", note: "Headlines at 40 to 64px with soft tracking. Never uppercase unless brief." },
+    { role: "Spec", family: "JetBrains Mono, 9-11px", note: "Shadow values and token names. Kickers uppercase, wide tracking." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "The raised slab: same color as the page, dual shadows only. Pressed in, the shadows invert and the surface sinks below the page plane.",
+        "The raised slab: same color as the page, dual shadows only. When pressed, the shadows invert and the surface sinks below the page plane.",
       code: `export const PrimaryButton = () => (
   <button className="rounded-2xl bg-[#E0E5EC] px-6 py-3 text-sm font-semibold text-[#4A4A4A] shadow-[-6px_-6px_12px_#ffffff,6px_6px_12px_#a3b1c6] transition-all active:shadow-[inset_-4px_-4px_10px_#ffffff,inset_4px_4px_10px_#a3b1c6]">
     Get started
@@ -65,7 +65,7 @@ export const neumorphism: StyleContent = {
     {
       name: "Input",
       description:
-        "An inset well — the shadows move inside the field, the edges look poured. Typed values appear to sink below the surface, never shout.",
+        "An inset well. The shadows move inside the field and the edges look poured. Typed values appear to sink below the surface, never shout.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block text-xs font-semibold text-[#4A4A4A]">Email</span>
@@ -93,7 +93,7 @@ export const neumorphism: StyleContent = {
     {
       name: "Badge",
       description:
-        "A small puff of the same material — raised chip, muted accent text. Never a colored fill; the fill IS the shadow math.",
+        "A small puff of the same material: raised chip, muted accent text. Never a colored fill, because the fill is the shadow math.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 rounded-full bg-[#E0E5EC] px-4 py-1.5 text-xs font-semibold text-[#6C63FF] shadow-[-4px_-4px_8px_#ffffff,4px_4px_8px_#a3b1c6]">
     Stable
@@ -114,7 +114,7 @@ export const neumorphism: StyleContent = {
     {
       name: "Card",
       description:
-        "A sea of #E0E5EC, floating on identical #E0E5EC. A dual shadow and nothing else — the softest thing on the page.",
+        "A sea of #E0E5EC floating on identical #E0E5EC. A dual shadow and nothing else, the softest thing on the page.",
       code: `export const ChangelogCard = () => (
   <div className="w-64 rounded-3xl bg-[#E0E5EC] p-6 shadow-[-10px_-10px_20px_#ffffff,10px_10px_20px_#a3b1c6]">
     <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#8F9BA8]">Changelog</p>
@@ -136,7 +136,7 @@ export const neumorphism: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "Round soft-icon buttons — the signature neumorphism gesture. Bar is flat #E0E5EC, icons sit in raised circles.",
+        "Round soft-icon buttons, the signature neumorphism gesture. The bar is flat #E0E5EC and the icons sit in raised circles.",
       code: `export const NavBar = () => (
   <header className="flex h-16 w-full items-center justify-between bg-[#E0E5EC] px-4">
     <span className="text-xl font-bold tracking-tight text-[#4A4A4A]">acme<span className="text-[#6C63FF]">.</span></span>
@@ -169,15 +169,15 @@ export const neumorphism: StyleContent = {
     },
   ],
   dos: [
-    "Keep background and surface the SAME color — depth is shadow math, not fill",
-    "Light from top-left, shade to bottom-right; never mix directions",
-    "Same shadow values across the whole app — one light source",
-    "Reserve accent color for the single primary action",
+    "Keep background and surface the same color. Depth is shadow math, not fill.",
+    "Light from the top left, shade to the bottom right. Never mix directions.",
+    "Use the same shadow values across the app, so there is one light source.",
+    "Reserve accent color for the single primary action.",
   ],
   donts: [
-    "Don't stack more than two depth levels — it reads as mud",
-    "Don't use dark backgrounds until you convert highlights correctly — light source stays top-left",
-    "Don't put small light text on raised surfaces — contrast fails",
-    "Don't use colored fills — they break the extrusion illusion",
+    "Don't stack more than two depth levels. It reads as mud.",
+    "Don't use dark backgrounds until you convert highlights correctly. The light source stays top left.",
+    "Don't put small light text on raised surfaces. Contrast fails.",
+    "Don't use colored fills. They break the extrusion illusion.",
   ],
 };

@@ -102,7 +102,7 @@ body {
 .s-next:hover .s-next-arrow {
   color: var(--s-bg);
 }
-/* tinted specimen stage w/ subtle dot grid — very light */
+/* tinted specimen stage with subtle dot grid, very light */
 .s-stage {
   background-color: color-mix(in srgb, var(--s-text) 3%, transparent);
   background-image: radial-gradient(
@@ -115,7 +115,7 @@ body {
   border-radius: calc(var(--s-radius) / 1.5);
 }
 
-/* sample-screen panel — same family as the stage, a step darker so it reads */
+/* sample-screen panel. Same family as the stage, a step darker so it reads */
 .s-panel {
   background: var(--s-panel);
 }

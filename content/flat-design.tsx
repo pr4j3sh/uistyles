@@ -14,8 +14,8 @@ export const flatDesign: StyleContent = {
     display: "font-sans font-semibold tracking-[-0.02em]",
     displayItalicLast: false,
   },
-  what: "Flat design strips away every skeuomorphic cue — no gradients, no shadows, no textures, no bevels. Hierarchy is built from solid color blocks, simple geometry and type weight alone, so interfaces stay fast to read and fast to build.",
-  origin: "Born from Microsoft's Metro design language (2010–12) and Apple's radical iOS 7 redesign (2013), flat design rejected the glossy realism of the web 2.0 era and became the default visual grammar of early mobile and modern SaaS.",
+  what: "Flat design removes every skeuomorphic cue: no gradients, shadows, textures or bevels. Hierarchy comes from solid color, simple geometry and type weight, which makes interfaces fast to read and fast to build.",
+  origin: "It emerged from Microsoft's Metro language in 2010 and Apple's iOS 7 redesign in 2013. Both rejected the glossy realism of the web 2.0 era, and flat design became the default look of early mobile apps and modern SaaS.",
   bestFor: [
     "Dashboards and data-dense apps",
     "SaaS products and design systems",
@@ -36,15 +36,15 @@ export const flatDesign: StyleContent = {
     { name: "Porcelain", hex: "#F3F4F6", role: "Sunken panels & tiles" },
   ],
   typography: [
-    { role: "UI / Body", family: "Open Sans — 400 / 600 / 700", note: "The canonical flat face; set labels and body at 13–15px, 600 weight for actions." },
-    { role: "Display", family: "Metro LG / Open Sans — 600", note: "Tight, confident headlines; all weight, no italics." },
-    { role: "Metadata", family: "JetBrains Mono — 9–11px", note: "Tile labels and section kickers. Uppercase, wide tracking." },
+    { role: "UI / Body", family: "Open Sans, 400 / 600 / 700", note: "The canonical flat face. Set labels and body at 13-15px, with 600 weight for actions." },
+    { role: "Display", family: "Metro LG / Open Sans, 600", note: "Tight, confident headlines. All weight, no italics." },
+    { role: "Metadata", family: "JetBrains Mono, 9-11px", note: "Tile labels and section kickers. Uppercase, wide tracking." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "A solid slab of color — no gradient, no shadow, no radius. Sentence case, 600 weight; the hover state is one step darker on the same hue, never a glow.",
+        "A solid slab of color with no gradient, shadow or radius. Sentence case at 600 weight. Hover moves one step darker on the same hue, never to a glow.",
       code: `export const PrimaryButton = () => (
   <button className="inline-flex items-center gap-2 bg-[#0078D7] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#005FB8]">
     Get started
@@ -65,7 +65,7 @@ export const flatDesign: StyleContent = {
     {
       name: "Input",
       description:
-        "A filled gray field that ignites on focus — background lifts to white and a two-pixel azure keyline appears. No inner shadow, no corner carving.",
+        "A filled gray field that wakes on focus: the background lifts to white and a two-pixel azure keyline appears. No inner shadow, no corner carving.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-1.5 block text-xs font-semibold text-[#1F2937]">Email</span>
@@ -93,7 +93,7 @@ export const flatDesign: StyleContent = {
     {
       name: "Badge",
       description:
-        "A solid chip of meaning — azure, teal or amber with white bold text, squared corners. Color is the message; size and weight agree with it.",
+        "A solid chip of meaning, in azure, teal or amber with white bold text and square corners. Color carries the message; size and weight agree with it.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-1.5 bg-[#00ABA9] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
     Stable
@@ -117,7 +117,7 @@ export const flatDesign: StyleContent = {
     {
       name: "Card",
       description:
-        "The Metro tile: one flat color field, white type, no chrome. Size and color do the entire hierarchy — a small white kicker, a big confident headline.",
+        "The Metro tile: one flat color field, white type, no chrome. Size and color do the hierarchy, with a small white kicker over a confident headline.",
       code: `export const ChangelogCard = () => (
   <div className="w-64 bg-[#0078D7] p-5 text-white">
     <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-white/70">
@@ -151,7 +151,7 @@ export const flatDesign: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "Wordmark left, flat links, no icons and no borders inside — one four-pixel azure rule at the bottom does all the wayfinding.",
+        "Wordmark left, flat links, no icons or inner borders. A four-pixel azure rule at the bottom handles all the wayfinding.",
       code: `export const NavBar = () => (
   <header className="flex h-14 w-full items-center justify-between border-b-4 border-[#0078D7] bg-white px-6">
     <span className="text-[17px] font-bold tracking-tight text-[#1F2937]">
@@ -192,15 +192,15 @@ export const flatDesign: StyleContent = {
     },
   ],
   dos: [
-    "Reserve color for meaning — one azure per screen, purpose per hue",
-    "Use weight and size for hierarchy, never elevation",
-    "Keep geometry simple: squares and generous rectangles",
-    "Ship confident, high-contrast text over every fill",
+    "Reserve color for meaning. One azure per screen, one purpose per hue.",
+    "Use weight and size for hierarchy, never elevation.",
+    "Keep geometry simple: squares and generous rectangles.",
+    "Ship confident, high-contrast text over every fill.",
   ],
   donts: [
-    "Don't add gradients, shadows, bevels or textures",
-    "Don't round corners — flat design is honest geometry",
-    "Don't pick a rainbow — three intentional hues, max",
-    "Don't shrink touch targets — flat removes affordance, so go big",
+    "Don't add gradients, shadows, bevels or textures.",
+    "Don't round corners. Flat design is geometry, full stop.",
+    "Don't pick a rainbow. Three intentional hues at most.",
+    "Don't shrink touch targets. Flat removes affordance, so go big.",
   ],
 };

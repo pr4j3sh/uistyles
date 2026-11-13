@@ -29,7 +29,7 @@ export const STYLE_GROUPS: StyleGroup[] = [
     styles: [
       s("minimalism", "Minimalism", "Less, but better. Radical restraint.", 1, "Foundations & Classics", "available"),
       s("flat-design", "Flat Design", "Pure shapes, zero decoration.", 2, "Foundations & Classics", "available"),
-      s("material-design", "Material Design", "Paper, ink and honest elevation.", 3, "Foundations & Classics", "available"),
+      s("material-design", "Material Design", "Paper, ink and tonal depth.", 3, "Foundations & Classics", "available"),
       s("swiss-design", "Swiss Design", "Grids, grotesque type, objective clarity.", 4, "Foundations & Classics", "available"),
       s("editorial-design", "Editorial Design", "The magazine as interface.", 5, "Foundations & Classics", "available"),
       s("typography-driven", "Typography-driven UI", "Type is the interface.", 6, "Foundations & Classics", "available"),
@@ -61,7 +61,7 @@ export const STYLE_GROUPS: StyleGroup[] = [
       s("glassmorphism", "Glassmorphism", "Frosted glass over vibrant light.", 17, "Light & Atmosphere", "available"),
       s("aurora-ui", "Aurora UI", "Northern lights as a design language.", 18, "Light & Atmosphere", "available"),
       s("gradient-ui", "Gradient UI", "Color in continuous transition.", 19, "Light & Atmosphere", "available"),
-      s("dark-ui", "Dark UI", "Light on dark, engineered for focus.", 20, "Light & Atmosphere", "available"),
+      s("dark-ui", "Dark UI", "Light on dark, built for long sessions.", 20, "Light & Atmosphere", "available"),
       s("light-ui", "Light UI", "Bright, airy, quietly confident.", 21, "Light & Atmosphere", "available"),
     ],
   },
@@ -81,7 +81,7 @@ export const STYLE_GROUPS: StyleGroup[] = [
       s("bento-grid-design", "Bento Grid Design", "Modular cells, Japanese lunchbox logic.", 27, "Systems & Surfaces", "available"),
       s("monochromatic-design", "Monochromatic Design", "One hue, infinite depth.", 28, "Systems & Surfaces", "available"),
       s("industrial-ui", "Industrial UI", "Machined, utilitarian, built to last.", 29, "Systems & Surfaces", "available"),
-      s("terminal-ui", "Terminal-inspired UI", "Green phosphor and honest text.", 30, "Systems & Surfaces", "available"),
+      s("terminal-ui", "Terminal-inspired UI", "Green phosphor and plain text.", 30, "Systems & Surfaces", "available"),
     ],
   },
 ];

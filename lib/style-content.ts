@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 
 export type StyleTheme = {
-  /** Solid base color — used for text sitting on an accent fill */
+  /** Solid base color, used for text sitting on an accent fill */
   base: string;
-  /** Page background — any CSS background value (color, layered gradients…) */
+  /** Page background: any CSS background value (color, layered gradients…) */
   background: string;
   /** Cell surface */
   surface: string;
@@ -15,17 +15,17 @@ export type StyleTheme = {
   text: string;
   /** Muted text */
   muted: string;
-  /** Accent — used for the Next-style hover invert */
+  /** Accent, used for the Next-style hover invert */
   accent: string;
   /** Cell corner radius, e.g. "0.5rem" or "0" */
   radius: string;
   /** Optional cell shadow, e.g. "0 20px 40px rgba(0,0,0,.4)" */
   shadow?: string;
-  /** Class for the hero name — defaults to font-serif (italic last word). */
+  /** Class for the hero name. Defaults to font-serif (italic last word). */
   display?: string;
-  /** Hero name font-size, any CSS value — defaults to clamp(3rem, 11vh, 6.5rem). */
+  /** Hero name font-size, any CSS value. Defaults to clamp(3rem, 11vh, 6.5rem). */
   displaySize?: string;
-  /** Italicize the final word of the hero name — defaults to true. */
+  /** Italicize the final word of the hero name. Defaults to true. */
   displayItalicLast?: boolean;
 };
 
@@ -51,7 +51,7 @@ export type StyleComponent = {
   name: string;
   /** Short note on how the style treats this component */
   description: string;
-  /** Tailwind classes only — copied verbatim by the user */
+  /** Tailwind classes only. Copied verbatim by the user */
   code: string;
   /** Live preview, rendered with the same classes from `code` */
   preview: ReactNode;
@@ -66,7 +66,7 @@ export type StyleContent = {
   theme: StyleTheme;
   /** One-paragraph definition of the style */
   what: string;
-  /** Origin / history, 1–2 sentences */
+  /** Origin / history, one or two sentences */
   origin: string;
   /** Where this style shines */
   bestFor: string[];

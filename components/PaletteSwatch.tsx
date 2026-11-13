@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-/** Click-to-copy palette swatch — copies the hex value. */
+/** Click-to-copy palette swatch. Copies the hex value. */
 export function PaletteSwatch({
   name,
   hex,

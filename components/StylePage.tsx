@@ -36,7 +36,7 @@ export function StylePage({
       className="style-scope flex h-full flex-col overflow-hidden"
       style={themeVars}
     >
-      {/* ── Row 1 — themed hero band (40vh) ───────────────── */}
+      {/* ── Row 1: themed hero band (40vh) ───────────────── */}
       <header className="relative flex h-[40vh] shrink-0 flex-col justify-between overflow-hidden border-b px-5 pb-5 pt-4 lg:px-8 lg:pt-5" style={{ borderColor: "var(--s-line)" }}>
         {/* watermark index */}
         <span
@@ -130,13 +130,13 @@ export function StylePage({
         </div>
       </header>
 
-      {/* ── Row 2 — the grid, all cells full height ───────── */}
+      {/* ── Row 2: the grid, all cells full height ───────── */}
       <div className="hscroll h-full min-h-0 flex-1 overflow-auto lg:overflow-x-auto lg:overflow-y-hidden">
         <div className="flex min-h-full flex-col gap-3 p-3 lg:h-full lg:min-h-0 lg:min-w-max lg:grid lg:grid-rows-1 lg:[grid-auto-columns:23rem] lg:[grid-auto-flow:column]">
           {content ? (
             <>
               {/* ── The basics ─────────────────────────────────── */}
-              <BentoCell kicker="01 — Basics" title="The essentials" className="lg:col-span-2">
+              <BentoCell kicker="01 / Basics" title="The essentials" className="lg:col-span-2">
                 <CellLabel>What it is</CellLabel>
                 <p className="text-[12.5px] leading-relaxed" style={{ color: "var(--s-text)", opacity: 0.78 }}>{content.what}</p>
 
@@ -171,7 +171,7 @@ export function StylePage({
               </BentoCell>
 
               {/* ── Palette ────────────────────────────────────── */}
-              <BentoCell kicker="02 — Palette" title="Color">
+              <BentoCell kicker="02 / Palette" title="Color">
                 <div className="grid grid-cols-2 gap-2">
                   {content.palette.map((swatch) => (
                     <PaletteSwatch
@@ -185,7 +185,7 @@ export function StylePage({
               </BentoCell>
 
               {/* ── Typography ─────────────────────────────────── */}
-              <BentoCell kicker="03 — Type" title="Typography">
+              <BentoCell kicker="03 / Type" title="Typography">
                 <div className="space-y-3">
                   {content.typography.map((type) => (
                     <div key={type.role} className="s-surface-2 s-border border px-4 py-3" style={{ borderRadius: "calc(var(--s-radius) / 1.5)" }}>
@@ -199,14 +199,14 @@ export function StylePage({
                 </div>
               </BentoCell>
 
-              {/* ── Components — one shared 3×6 subgrid so all rows align ── */}
+              {/* ── Components: one shared 3×6 subgrid so all rows align ── */}
               <div className="flex flex-col gap-3 lg:col-span-6 lg:grid lg:grid-rows-[auto_1fr_auto] lg:gap-3 lg:[grid-template-columns:subgrid]">
                 {content.components.map((component, i) => (
                   <ComponentCell key={component.name} component={component} number={i + 1} />
                 ))}
               </div>
 
-              {/* ── Do / Don't — wide, side by side ────────────── */}
+              {/* ── Do / Don't: wide, side by side ────────────── */}
               <BentoCell kicker="The last word" title="Do / Don't" className="col-span-2">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
@@ -242,11 +242,11 @@ export function StylePage({
               </p>
               <p className="s-dim mt-4 max-w-md text-[12.5px] leading-relaxed">
                 Every uistyles page covers the same ground: the essentials, a reference
-                palette and type pairing, and four to six core components rendered live —
+                palette and type pairing, and five core components rendered live,
                 each with copy-ready Tailwind classes.
               </p>
               <div className="mt-6 space-y-2">
-                {["The essentials — what it is, where it came from", "Reference palette & typography", "Button, card, input, badge, nav bar", "Copy-ready Tailwind classes for each", "Do / Don't cheat sheet"].map((item) => (
+                {["The essentials: what it is, where it came from", "Reference palette & typography", "Button, card, input, badge, nav bar", "Copy-ready Tailwind classes for each", "Do / Don't cheat sheet"].map((item) => (
                   <div key={item} className="s-surface-2 s-border flex items-center gap-3 border px-4 py-2.5 text-[11.5px]" style={{ color: "var(--s-text)", opacity: 0.75, borderRadius: "calc(var(--s-radius) / 1.5)" }}>
                     <span className="h-1 w-1 rounded-full" style={{ background: "var(--s-accent)" }} />
                     {item}

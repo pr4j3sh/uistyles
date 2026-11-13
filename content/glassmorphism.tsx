@@ -16,8 +16,8 @@ export const glassmorphism: StyleContent = {
     displayItalicLast: false,
     shadow: "0 24px 60px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.28)",
   },
-  what: "Glassmorphism is frost — white translucency blurred across a loud gradient backdrop, edged with a hairline of specular light. The material is the point: light, diffusion and depth, not a colored panel.",
-  origin: "A synthesis of iOS 13 vibrancy (2019), macOS Big Sur's sidebars (2020), Windows 11 Mica/Acrylic (2021) and the Figma community's 'glass UI' wave — the first post-flat technique to insist the background be part of the composition.",
+  what: "Glassmorphism is frost: white translucency blurred over a loud gradient backdrop, edged with a hairline of specular light. The material is the point. Light, diffusion and depth, not a colored panel.",
+  origin: "It pulled together iOS 13 vibrancy in 2019, macOS Big Sur sidebars in 2020, Windows 11 Mica and Acrylic in 2021, and the Figma community's glass UI wave. It was the first post-flat technique to insist the background be part of the composition.",
   bestFor: [
     "Product launches and hero sections",
     "Media players and music UIs",
@@ -30,23 +30,23 @@ export const glassmorphism: StyleContent = {
     "Reading-heavy long-form",
   ],
   palette: [
-    { name: "Coral", hex: "#FF6B6B", role: "Sunset lobe — top-left" },
-    { name: "Magenta", hex: "#E84A8C", role: "Noon wash — center" },
-    { name: "Violet", hex: "#8B5CF6", role: "Dusk lobe — bottom-right" },
-    { name: "Cyan", hex: "#22D3EE", role: "Specular accent — interactive glow" },
-    { name: "Ink", hex: "#141A2E", role: "Canvas fallback — twilight slate" },
-    { name: "White", hex: "#F8FAFC", role: "Frost edge — specular highlight" },
+    { name: "Coral", hex: "#FF6B6B", role: "Sunset lobe, top-left" },
+    { name: "Magenta", hex: "#E84A8C", role: "Noon wash, center" },
+    { name: "Violet", hex: "#8B5CF6", role: "Dusk lobe, bottom-right" },
+    { name: "Cyan", hex: "#22D3EE", role: "Specular accent, interactive glow" },
+    { name: "Ink", hex: "#141A2E", role: "Canvas fallback, twilight slate" },
+    { name: "White", hex: "#F8FAFC", role: "Frost edge, specular highlight" },
   ],
   typography: [
-    { role: "Display", family: "Inter — 500 / 600", note: "34–56px, tight tracking, normal weight on purpose — frost whispers rather than shouts." },
-    { role: "Body", family: "Inter — 400 / 500", note: "14–15px/1.5. Always 500+ weight on glass — thin strokes vanish into blur." },
-    { role: "Spec", family: "JetBrains Mono — 9–11px", note: "Backdrop / 40px / 0.09 / SAT 140% — print the recipe on the panel." },
+    { role: "Display", family: "Inter, 500 / 600", note: "34 to 56px, tight tracking, normal weight on purpose. Frost whispers rather than shouts." },
+    { role: "Body", family: "Inter, 400 / 500", note: "14-15px/1.5. Always 500 weight or heavier on glass. Thin strokes vanish into blur." },
+    { role: "Spec", family: "JetBrains Mono, 9-11px", note: "Backdrop / 40px / 0.09 / SAT 140%. Print the recipe on the panel." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "A caustic cyan glow behind glass — translucent fill, specular top edge, backdrop-heavy. The hover deepens the light rather than darkening the fill.",
+        "A caustic cyan glow behind glass: translucent fill, specular top edge, heavy backdrop blur. The hover deepens the light rather than darkening the fill.",
       code: `export const PrimaryButton = () => (
   <button className="h-12 rounded-full border border-[#22D3EE]/35 bg-[rgba(34,211,238,0.15)] px-6 text-sm font-semibold text-[#F8FAFC] shadow-[0_0_24px_rgba(34,211,238,0.35),inset_0_1px_0_rgba(255,255,255,0.4)] backdrop-blur-md transition-shadow hover:shadow-[0_0_36px_rgba(34,211,238,0.55),inset_0_1px_0_rgba(255,255,255,0.5)]">
     Get started
@@ -65,7 +65,7 @@ export const glassmorphism: StyleContent = {
     {
       name: "Input",
       description:
-        "Frosted slot — translucent well, white hairline, cyan caret. Placeholder disappears on focus; the hairline ignites like light through water.",
+        "A frosted slot: translucent well, white hairline, cyan caret. The placeholder disappears on focus, and the hairline ignites like light through water.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-mono text-[9px] uppercase tracking-[0.3em] text-[rgba(248,250,252,0.55)]">Email</span>
@@ -93,7 +93,7 @@ export const glassmorphism: StyleContent = {
     {
       name: "Badge",
       description:
-        "A caustic fleck — cyan-filled, white-specular top edge. Micro size on purpose; glass badges drown in blur at larger sizes.",
+        "A caustic fleck: cyan fill, white specular top edge. Micro size on purpose; glass badges drown in blur at larger sizes.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 rounded-full border border-[#22D3EE]/40 bg-[rgba(34,211,238,0.12)] px-3 py-1 font-mono text-[9px] font-semibold uppercase tracking-[0.3em] text-[#22D3EE] shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]">
     Stable
@@ -114,7 +114,7 @@ export const glassmorphism: StyleContent = {
     {
       name: "Card",
       description:
-        "The poster slab — frosted white at 9%, specular top edge, deep drop shadow trailing the sunset. Body text at 500+ weight, never 400.",
+        "The poster slab: frosted white at 9%, specular top edge, a deep drop shadow trailing the sunset. Body text at 500 weight or heavier, never 400.",
       code: `export const ChangelogCard = () => (
   <div className="w-64 rounded-2xl border border-[rgba(255,255,255,0.18)] bg-[rgba(255,255,255,0.09)] p-6 shadow-[0_16px_40px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.28)] backdrop-blur-xl">
     <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[rgba(248,250,252,0.55)]">CHNG / 002</p>
@@ -136,7 +136,7 @@ export const glassmorphism: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "A floating frosted pill — the canonical macOS vibe. Cyan wordmark dot, translucent, heavy blur; the bar hovers above the sunset.",
+        "A floating frosted pill, the canonical macOS vibe. Cyan wordmark dot, translucent, heavy blur; the bar hovers above the sunset.",
       code: `export const NavBar = () => (
   <header className="flex h-16 w-full items-center justify-between rounded-full border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.1)] px-4 shadow-[0_8px_32px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.3)] backdrop-blur-2xl">
     <span className="pl-2 text-lg font-semibold tracking-tight text-[#F8FAFC]">acme<span className="text-[#22D3EE]">.</span></span>
@@ -169,15 +169,15 @@ export const glassmorphism: StyleContent = {
     },
   ],
   dos: [
-    "Put loud color BEHIND the glass — blur needs something to blur",
-    "One specular source per screen (top edge) — consistency sells the material",
-    "Body text at 500+ weight on glass — 400 weight vaporizes in the blur",
-    "backdrop-blur-xl / 2xl always — anything below 12px is smudge, not frost",
+    "Put loud color behind the glass. Blur needs something to blur.",
+    "Use one specular source per screen, at the top edge. Consistency sells the material.",
+    "Set body text at 500 weight or heavier on glass. Weight 400 vaporizes in the blur.",
+    "Use backdrop-blur-xl or 2xl. Anything below 12px is smudge, not frost.",
   ],
   donts: [
-    "Don't use plain white text on white glass — it's a whiteout, not a panel",
-    "Don't layer more than two frosted depths — the magic desaturates fast",
-    "Don't let body copy sit on a busy blob without a frost backing",
-    "Don't skip the specular lip — without it, glass is just transparency",
+    "Don't use plain white text on white glass. It's a whiteout, not a panel.",
+    "Don't layer more than two frosted depths. The magic desaturates fast.",
+    "Don't let body copy sit on a busy blob without a frost backing.",
+    "Don't skip the specular lip. Without it, glass is just transparency.",
   ],
 };

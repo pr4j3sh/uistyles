@@ -16,8 +16,8 @@ export const terminalUi: StyleContent = {
     displayItalicLast: false,
     shadow: "0 0 0 1px rgba(74,246,38,0.12), 0 0 24px rgba(74,246,38,0.06)",
   },
-  what: "Terminal-inspired UI is the command line taken seriously as a visual language — black glass, phosphor green, monospace everything, bracket-delimited actions and prompts that tell you exactly where you are. Nothing is hidden behind an icon.",
-  origin: "From 1970s VT100 and phosphor CRTs through 1980s BBS culture and 2000s IRC clients, revived by developer tools and the 2020s terminal-aesthetic wave in marketing sites and dashboards.",
+  what: "Terminal-inspired UI is the command line taken seriously as a visual language: black glass, phosphor green, monospace everything, bracket-delimited actions and prompts that tell you exactly where you are. Nothing is hidden behind an icon.",
+  origin: "It runs from 1970s VT100 and phosphor CRTs through 1980s BBS culture and 2000s IRC clients, then was revived by developer tools and the 2020s terminal-aesthetic wave in marketing sites and dashboards.",
   bestFor: [
     "Developer tools, CLIs and infrastructure",
     "Security and observability products",
@@ -30,23 +30,23 @@ export const terminalUi: StyleContent = {
     "Brands that need warmth or approachability",
   ],
   palette: [
-    { name: "Void", hex: "#050806", role: "Canvas — CRT black" },
-    { name: "Phosphor", hex: "#4AF626", role: "Accent — primary emission" },
-    { name: "Amber", hex: "#FFB000", role: "Warning — secondary emission" },
-    { name: "Ash", hex: "#B8F5C0", role: "Primary text — soft phosphor" },
-    { name: "Dim", hex: "#5C8A64", role: "Muted text & prompts" },
-    { name: "Grid", hex: "#1C3A24", role: "Borders & scanline structure" },
+    { name: "Void", hex: "#050806", role: "Canvas, CRT black" },
+    { name: "Phosphor", hex: "#4AF626", role: "Accent, primary emission" },
+    { name: "Amber", hex: "#FFB000", role: "Warning, secondary emission" },
+    { name: "Ash", hex: "#B8F5C0", role: "Primary text, soft phosphor" },
+    { name: "Dim", hex: "#5C8A64", role: "Muted text and prompts" },
+    { name: "Grid", hex: "#1C3A24", role: "Borders and scanline structure" },
   ],
   typography: [
-    { role: "Display", family: "JetBrains Mono — 700", note: "36–56px, tight, sentence case. The machine speaks in one voice." },
-    { role: "Body", family: "JetBrains Mono — 400 / 500", note: "13–14px/1.65. Mono body is the point; keep lines short." },
-    { role: "Spec", family: "JetBrains Mono — 9–11px", note: "Prompts, exit codes, paths — lowercase paths, uppercase labels." },
+    { role: "Display", family: "JetBrains Mono, 700", note: "36 to 56px, tight, sentence case. The machine speaks in one voice." },
+    { role: "Body", family: "JetBrains Mono, 400 / 500", note: "13-14px/1.65. Mono body is the point; keep lines short." },
+    { role: "Spec", family: "JetBrains Mono, 9-11px", note: "Prompts, exit codes, paths. Lowercase paths, uppercase labels." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "A bracketed command — flat green keyline, 10% phosphor fill, uppercase mono label. It reads as something you type, not something you click.",
+        "A bracketed command: flat green keyline, 10% phosphor fill, uppercase mono label. It reads as something you type, not something you click.",
       code: `export const PrimaryButton = () => (
   <button className="h-10 border border-[#4AF626] bg-[#4AF626]/10 px-5 font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#4AF626] transition-colors hover:bg-[#4AF626]/20">
     [ Execute ]
@@ -67,7 +67,7 @@ export const terminalUi: StyleContent = {
     {
       name: "Input",
       description:
-        "A live prompt — dollar sign, blinking-ready caret, no chrome. The field is a line in the shell; focus brightens the border only.",
+        "A live prompt: dollar sign, blinking-ready caret, no chrome. The field is a line in the shell; focus brightens the border only.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-mono text-[9px] uppercase tracking-[0.24em] text-[#5C8A64]">user@acme:~$</span>
@@ -101,7 +101,7 @@ export const terminalUi: StyleContent = {
     {
       name: "Badge",
       description:
-        "An exit code — bracketed mono tag, phosphor for OK and amber for warnings. Status is text, not a colored dot; the terminal has no icons.",
+        "An exit code: bracketed mono tag, phosphor for OK and amber for warnings. Status is text, not a colored dot; the terminal has no icons.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center border border-[#4AF626]/40 bg-[#4AF626]/10 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#4AF626]">
     [ OK ]
@@ -122,14 +122,14 @@ export const terminalUi: StyleContent = {
     {
       name: "Card",
       description:
-        "A terminal window — title bar with three square lamps, a command, two lines of output and a blinking cursor. The transcript is the content.",
+        "A terminal window: title bar with three square lamps, a command, two lines of output and a blinking cursor. The transcript is the content.",
       code: `export const ChangelogCard = () => (
   <article className="w-64 border border-[#1C3A24] bg-[#08120B] font-mono shadow-[0_0_0_1px_rgba(74,246,38,0.12)]">
     <div className="flex items-center gap-1.5 border-b border-[#1C3A24] bg-[#0C1A10] px-3 py-2">
       <span className="h-2 w-2 bg-[#FFB000]" />
       <span className="h-2 w-2 bg-[#4AF626]" />
       <span className="h-2 w-2 bg-[#5C8A64]" />
-      <span className="ml-2 text-[8px] uppercase tracking-[0.24em] text-[#5C8A64]">acme — zsh</span>
+      <span className="ml-2 text-[8px] uppercase tracking-[0.24em] text-[#5C8A64]">acme / zsh</span>
     </div>
     <div className="p-4 text-[10px] leading-relaxed">
       <p className="text-[#4AF626]">$ acme search --fast</p>
@@ -147,7 +147,7 @@ export const terminalUi: StyleContent = {
               <span className="h-2 w-2 bg-[#FFB000]" />
               <span className="h-2 w-2 bg-[#4AF626]" />
               <span className="h-2 w-2 bg-[#5C8A64]" />
-              <span className="ml-2 text-[8px] uppercase tracking-[0.24em] text-[#5C8A64]">acme — zsh</span>
+              <span className="ml-2 text-[8px] uppercase tracking-[0.24em] text-[#5C8A64]">acme / zsh</span>
             </div>
             <div className="p-4 text-[10px] leading-relaxed">
               <p className="text-[#4AF626]">$ acme search --fast</p>
@@ -162,7 +162,7 @@ export const terminalUi: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "A shell prompt as header — user@host in phosphor, path-style links in dim green, no logo. You always know where you are.",
+        "A shell prompt as header: user@host in phosphor, path-style links in dim green, no logo. You always know where you are.",
       code: `export const NavBar = () => (
   <header className="flex h-12 w-full items-center justify-between border-b border-[#1C3A24] bg-[#050806] px-4 font-mono">
     <span className="text-[12px] text-[#5C8A64]">acme@prod<span className="text-[#4AF626]">:~$</span></span>
@@ -191,15 +191,15 @@ export const terminalUi: StyleContent = {
     },
   ],
   dos: [
-    "Mono for every glyph — proportional type breaks the spell",
-    "Phosphor green for action, amber for warnings; nothing else glows",
-    "Show the prompt and the path — orientation is the interface",
-    "Keep lines short and outputs honest; the terminal never markets",
+    "Mono for every glyph. Proportional type breaks the spell.",
+    "Phosphor green for action, amber for warnings; nothing else glows.",
+    "Show the prompt and the path. Orientation is the interface.",
+    "Keep lines short and outputs plain. The terminal never markets.",
   ],
   donts: [
-    "Don't add icons where a word would do",
-    "Don't use soft shadows or rounded corners — CRTs have neither",
-    "Don't glow body text — reserve emission for accents and prompts",
-    "Don't fake typing animations longer than a beat; waiting is not a feature",
+    "Don't add icons where a word would do.",
+    "Don't use soft shadows or rounded corners. CRTs have neither.",
+    "Don't glow body text. Reserve emission for accents and prompts.",
+    "Don't fake typing animations longer than a beat. Waiting is not a feature.",
   ],
 };

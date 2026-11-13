@@ -18,7 +18,7 @@ export async function generateMetadata({
   if (!meta) return { title: "Not found" };
   return {
     title: meta.name,
-    description: `${meta.name} — ${meta.tagline} Learn the basics, palette, typography and core components with copy-ready Tailwind classes.`,
+    description: `${meta.name}: ${meta.tagline} Learn the basics, palette, typography and core components with copy-ready Tailwind classes.`,
   };
 }
 

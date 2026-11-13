@@ -17,8 +17,8 @@ export const pixelArtUi: StyleContent = {
     displayItalicLast: false,
     shadow: "4px 4px 0 #0F1020",
   },
-  what: "Pixel Art UI is the interface as an 8-bit cartridge — hard edges, indexed colors, chunky keylines, offset shadows with no blur, and mono type that behaves like a bitmap font. Every corner is a decision, because there is no anti-aliasing to hide behind.",
-  origin: "Born in 1970s arcade cabinets and 1980s consoles (NES, Game Boy), codified by 1990s RPG dialog boxes, then reclaimed by indie games and the modern pixel-art revival of the 2010s.",
+  what: "Pixel Art UI is the interface as an 8-bit cartridge: hard edges, indexed colors, chunky keylines, offset shadows with no blur, and mono type that behaves like a bitmap font. Every corner is a decision, because there is no anti-aliasing to hide behind.",
+  origin: "It was born in 1970s arcade cabinets and 1980s consoles (NES, Game Boy), codified by 1990s RPG dialog boxes, then reclaimed by indie games and the modern pixel-art revival of the 2010s.",
   bestFor: [
     "Indie games and game storefronts",
     "Creative tools with a playful edge",
@@ -31,23 +31,23 @@ export const pixelArtUi: StyleContent = {
     "Brands that need to feel premium or quiet",
   ],
   palette: [
-    { name: "Cartridge", hex: "#1A1C2C", role: "Canvas — deep console navy" },
-    { name: "Sprite", hex: "#F4F4F4", role: "Primary text — 1-bit white" },
-    { name: "Coin", hex: "#FFCD75", role: "Accent — gold coin" },
+    { name: "Cartridge", hex: "#1A1C2C", role: "Canvas, deep console navy" },
+    { name: "Sprite", hex: "#F4F4F4", role: "Primary text, 1-bit white" },
+    { name: "Coin", hex: "#FFCD75", role: "Accent, gold coin" },
     { name: "HP", hex: "#A7F070", role: "Health / success" },
     { name: "Mana", hex: "#41A6F6", role: "Focus / info" },
     { name: "Danger", hex: "#B13E53", role: "Damage / destructive" },
   ],
   typography: [
-    { role: "Display", family: "JetBrains Mono — 700", note: "Uppercase, 32–52px, tight tracking. Read it as a bitmap, not a paragraph." },
-    { role: "Body", family: "JetBrains Mono — 400 / 500", note: "13–14px/1.6. Mono everywhere — the bitmap has no proportional widths." },
-    { role: "Spec", family: "JetBrains Mono — 9–11px", note: "HUD readouts: HP 100/100, LVL 24, 1UP — always uppercase." },
+    { role: "Display", family: "JetBrains Mono, 700", note: "Uppercase, 32 to 52px, tight tracking. Read it as a bitmap, not a paragraph." },
+    { role: "Body", family: "JetBrains Mono, 400 / 500", note: "13-14px/1.6. Mono everywhere; the bitmap has no proportional widths." },
+    { role: "Spec", family: "JetBrains Mono, 9-11px", note: "HUD readouts: HP 100/100, LVL 24, 1UP. Always uppercase." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "A cartridge key — 3px hard keyline, gold fill, offset black shadow. Pressing translates it into the shadow like a physical arcade button.",
+        "A cartridge key: 3px hard keyline, gold fill, offset black shadow. Pressing translates it into the shadow like a physical arcade button.",
       code: `export const PrimaryButton = () => (
   <button className="h-12 border-[3px] border-[#0F1020] bg-[#FFCD75] px-6 font-mono text-sm font-bold uppercase tracking-[0.14em] text-[#1A1C2C] shadow-[4px_4px_0_#0F1020] transition-transform active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0_#0F1020]">
     Start
@@ -68,7 +68,7 @@ export const pixelArtUi: StyleContent = {
     {
       name: "Input",
       description:
-        "A save-slot field — 3px keyline, inset black well, phosphor-green text. Focus swaps the keyline to mana blue, never to a glow.",
+        "A save-slot field: 3px keyline, inset black well, phosphor-green text. Focus swaps the keyline to mana blue, never to a glow.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-mono text-[9px] uppercase tracking-[0.28em] text-[#94B0C2]">Player name</span>
@@ -96,7 +96,7 @@ export const pixelArtUi: StyleContent = {
     {
       name: "Badge",
       description:
-        "An HP chip — square corners, 2px keyline, one stat per chip. Green for health, gold for coins, red for damage; color is the readout.",
+        "An HP chip: square corners, 2px keyline, one stat per chip. Green for health, gold for coins, red for damage; color is the readout.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 border-2 border-[#0F1020] bg-[#A7F070] px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-[#1A1C2C] shadow-[2px_2px_0_#0F1020]">
     HP 100/100
@@ -117,10 +117,10 @@ export const pixelArtUi: StyleContent = {
     {
       name: "Card",
       description:
-        "An RPG dialog box — 3px white keyline, cartridge-navy panel, hard drop shadow, gold level tag. Text is delivered one beat at a time.",
+        "An RPG dialog box: 3px white keyline, cartridge-navy panel, hard drop shadow, gold level tag. Text is delivered one beat at a time.",
       code: `export const ChangelogCard = () => (
   <article className="w-64 border-[3px] border-[#F4F4F4] bg-[#23253A] p-4 shadow-[4px_4px_0_#0F1020]">
-    <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#FFCD75]">LVL 24 — SHOP</p>
+    <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#FFCD75]">LVL 24 / SHOP</p>
     <h3 className="mt-2 font-mono text-base font-bold uppercase leading-tight tracking-[0.02em] text-[#F4F4F4]">Faster search, fewer keystrokes.</h3>
     <p className="mt-2 font-mono text-[10px] leading-relaxed text-[#94B0C2]">{"// results stream in as you type; queries now 80ms"}</p>
     <p className="mt-3 text-right font-mono text-[11px] text-[#FFCD75]">▼</p>
@@ -130,7 +130,7 @@ export const pixelArtUi: StyleContent = {
       preview: (
         <div className="flex w-64 flex-col justify-center s-panel rounded-xl p-4">
           <article className="w-full border-[3px] border-[#F4F4F4] bg-[#23253A] p-4 shadow-[4px_4px_0_#0F1020]">
-            <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#FFCD75]">LVL 24 — SHOP</p>
+            <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#FFCD75]">LVL 24 / SHOP</p>
             <h3 className="mt-2 font-mono text-base font-bold uppercase leading-tight tracking-[0.02em] text-[#F4F4F4]">Faster search, fewer keystrokes.</h3>
             <p className="mt-2 font-mono text-[10px] leading-relaxed text-[#94B0C2]">{"// results stream in as you type; queries now 80ms"}</p>
             <p className="mt-3 text-right font-mono text-[11px] text-[#FFCD75]">▼</p>
@@ -141,7 +141,7 @@ export const pixelArtUi: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "A HUD rail — arcade-blue bar, hard black rule, square coin mark. Links are mono caps; the active item is simply gold, like a selected menu entry.",
+        "A HUD rail: arcade-blue bar, hard black rule, square coin mark. Links are mono caps; the active item is simply gold, like a selected menu entry.",
       code: `export const NavBar = () => (
   <header className="flex h-12 w-full items-center justify-between border-b-[3px] border-[#0F1020] bg-[#29366F] px-4">
     <span className="flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-[0.12em] text-[#F4F4F4]">
@@ -180,15 +180,15 @@ export const pixelArtUi: StyleContent = {
     },
   ],
   dos: [
-    "Use a limited indexed palette — 6–8 colors, each with a job",
-    "Hard keylines and offset shadows with 0px blur, always",
-    "Mono type everywhere — the bitmap grid is the law",
-    "Square corners and even pixel steps; no half-measures",
+    "Use a limited indexed palette: 6 to 8 colors, each with a job.",
+    "Hard keylines and offset shadows with 0px blur, always.",
+    "Mono type everywhere. The bitmap grid is the law.",
+    "Square corners and even pixel steps. No half measures.",
   ],
   donts: [
-    "Don't blur or anti-alias key elements — it breaks the illusion",
-    "Don't mix a pixel face with a clean grotesque in the same line",
-    "Don't use gradients — indexed color means flat fills",
-    "Don't make body copy smaller than 10px — legibility is still a stat",
+    "Don't blur or anti-alias key elements. It breaks the illusion.",
+    "Don't mix a pixel face with a clean grotesque in the same line.",
+    "Don't use gradients. Indexed color means flat fills.",
+    "Don't make body copy smaller than 10px. Legibility is still a stat.",
   ],
 };

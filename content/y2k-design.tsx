@@ -16,8 +16,8 @@ export const y2kDesign: StyleContent = {
     displayItalicLast: false,
     shadow: "0 10px 28px rgba(27,35,51,0.22), inset 0 1px 0 #FFFFFF, inset 0 -3px 6px rgba(27,35,51,0.12)",
   },
-  what: "Y2K Design is millennium optimism rendered in chrome and aqua — iridescent gradients, glossy plastics, bubble type, orbs, starbursts, translucency everywhere. The world was going to be run by robots; the UI should look like a holographic Palm Pilot.",
-  origin: "Peaked 1998–2004 around the millennium bug, iMac G3, MSN Messenger and the first dot-com bubble — then got memed back in 2020 as Y2K-core. Built from DMG software, metallic hardware packaging and Winamp skins.",
+  what: "Y2K Design is millennium optimism rendered in chrome and aqua: iridescent gradients, glossy plastics, bubble type, orbs, starbursts, translucency everywhere. The world was going to be run by robots, and the UI should look like a holographic Palm Pilot.",
+  origin: "It peaked between 1998 and 2004 around the millennium bug, iMac G3, MSN Messenger and the first dot-com bubble, then got memed back in 2020 as Y2K-core. It was built from DMG software, metallic hardware packaging and Winamp skins.",
   bestFor: [
     "Music and DJ platforms",
     "Nostalgia-first consumer brands",
@@ -38,15 +38,15 @@ export const y2kDesign: StyleContent = {
     { name: "Steel", hex: "#C3CBD9", role: "Brushed metal" },
   ],
   typography: [
-    { role: "Display", family: "Inter — 700 / 800", note: "40–64px with tight spacing; chrome-gradient text on hero moments only, never on body." },
-    { role: "Body", family: "Inter — 400 / 500", note: "14–15px/1.5, slightly cool-toned, never serif." },
-    { role: "Metadata", family: "JetBrains Mono — 9–11px", note: "Build stamps, version tags and DOT-COM era micro-copy: BUILD_0042.SYS." },
+    { role: "Display", family: "Inter, 700 / 800", note: "40 to 64px with tight spacing. Chrome-gradient text on hero moments only, never on body." },
+    { role: "Body", family: "Inter, 400 / 500", note: "14-15px/1.5, slightly cool-toned, never serif." },
+    { role: "Metadata", family: "JetBrains Mono, 9-11px", note: "Build stamps, version tags and dot-com era microcopy: BUILD_0042.SYS." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "An iridescent aqua capsule — candy blue → cyan → mint wash, specular highlight bar, and a chrome rim border. Clicking makes a satisfyingly wet 'thock'.",
+        "An iridescent aqua capsule: candy blue to cyan to mint wash, specular highlight bar, and a chrome rim border. Clicking makes a satisfyingly wet 'thock'.",
       code: `export const PrimaryButton = () => (
   <button className="h-12 rounded-full border border-[#3B4C74] bg-gradient-to-b from-[#8FF3FF] via-[#00D4F0] to-[#0089C9] px-6 text-sm font-bold text-[#04263B] shadow-[0_6px_14px_rgba(0,180,220,0.4),inset_0_1px_0_rgba(255,255,255,0.85),inset_0_-2px_5px_rgba(0,60,90,0.4)] [text-shadow:0_1px_0_rgba(255,255,255,0.5)] transition-all hover:from-[#A8F6FF] hover:via-[#1AE0F8] hover:to-[#00A0E0] active:shadow-[inset_0_2px_5px_rgba(0,60,90,0.5)]">
     Get started
@@ -67,7 +67,7 @@ export const y2kDesign: StyleContent = {
     {
       name: "Input",
       description:
-        "A frosted inset slot — white translucency over lavender, inner glow, cyan caret. Focus brightens the rim like a CD jewel case under UV.",
+        "A frosted inset slot: white translucency over lavender, inner glow, cyan caret. Focus brightens the rim like a CD jewel case under UV.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-mono text-[9px] uppercase tracking-[0.3em] text-[#67718A]">Email</span>
@@ -95,7 +95,7 @@ export const y2kDesign: StyleContent = {
     {
       name: "Badge",
       description:
-        "An iridescent candy chip — aqua-to-grape gradient pill with a chrome seam. Tiny, glossy, slightly too shiny for its own good.",
+        "An iridescent candy chip: aqua-to-grape gradient pill with a chrome seam. Tiny, glossy, slightly too shiny for its own good.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 rounded-full border border-[#3B4C74] bg-gradient-to-r from-[#00E0FF] via-[#4A6BFF] to-[#B86BFF] px-3.5 py-1.5 font-mono text-[9px] font-bold uppercase tracking-[0.3em] text-white shadow-[0_2px_6px_rgba(74,107,255,0.45),inset_0_1px_0_rgba(255,255,255,0.75)] [text-shadow:0_1px_1px_rgba(0,20,40,0.5)]">
     Stable
@@ -116,7 +116,7 @@ export const y2kDesign: StyleContent = {
     {
       name: "Card",
       description:
-        "A chrome-framed DMG window — brushed steel outer rim, white-gloss interior, specular highlight — like a Software Update dialog from 2000.",
+        "A chrome-framed DMG window: brushed steel outer rim, white-gloss interior, specular highlight. Like a Software Update dialog from 2000.",
       code: `export const ChangelogCard = () => (
   <div className="w-64 rounded-2xl border border-[#8A93A6] bg-gradient-to-b from-[#D4DAE6] via-[#E8ECF2] to-[#C3CBD9] p-[6px] shadow-[0_10px_28px_rgba(27,35,51,0.35),inset_0_1px_0_#FFFFFF]">
     <div className="rounded-xl border border-[#8A93A6] bg-white shadow-[inset_0_1px_0_#FFFFFF]">
@@ -152,7 +152,7 @@ export const y2kDesign: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "A chrome toolbar — horizontal brushed-silver gradient, three glossy orb traffic-lights, one aqua dot for the brand. The future, 1999 model.",
+        "A chrome toolbar: horizontal brushed-silver gradient, three glossy orb traffic lights, one aqua dot for the brand. The future, 1999 model.",
       code: `export const NavBar = () => (
   <header className="flex h-14 w-full items-center justify-between border-b border-[#8A93A6] bg-gradient-to-b from-[#FDFEFF] via-[#E8ECF2] to-[#C3CBD9] px-4 shadow-[inset_0_1px_0_#FFFFFF,0_1px_2px_rgba(27,35,51,0.25)]">
     <div className="flex items-center gap-2">
@@ -191,15 +191,15 @@ export const y2kDesign: StyleContent = {
     },
   ],
   dos: [
-    "Chrome + aqua + one violet — cap the millennial palette at three hues",
-    "Specular bars on every glossy surface — the shine is the story",
-    "Mono build-stamp micro-copy everywhere: v2.4.0 / BUILD_0042",
-    "Translucency over gradients — glass over chrome over plastic",
+    "Cap the millennial palette at three hues: chrome, aqua and one violet.",
+    "Put specular bars on every glossy surface. The shine is the story.",
+    "Use mono build-stamp microcopy everywhere: v2.4.0 / BUILD_0042.",
+    "Layer translucency over gradients: glass over chrome over plastic.",
   ],
   donts: [
-    "Don't use flat colors where a gradient exists — flatness kills the futurism",
-    "Don't mix in modern minimalism — one Y2K decision per screen, not a hybrid",
-    "Don't use white text on aqua — the cyan is a highlighter, not a body fill",
-    "Don't render real Apple logos — chrome is a style, trademarks are not",
+    "Don't use flat colors where a gradient exists. Flatness kills the futurism.",
+    "Don't mix in modern minimalism. One Y2K decision per screen, not a hybrid.",
+    "Don't use white text on aqua. The cyan is a highlighter, not a body fill.",
+    "Don't render real Apple logos. Chrome is a style, trademarks are not.",
   ],
 };

@@ -4,11 +4,11 @@ import { STYLE_GROUPS, ALL_STYLES } from "@/lib/styles";
 export default function Home() {
   return (
     <div className="hscroll h-full overflow-y-auto">
-      {/* ── Hero — same 40vh band as the style pages ─────── */}
+      {/* ── Hero: same 40vh band as the style pages ─────── */}
       <header className="relative flex h-[40vh] shrink-0 flex-col justify-between overflow-hidden border-b border-line px-6 pb-5 pt-4 lg:px-12 lg:pt-5">
         <div className="flex items-center justify-between gap-4">
           <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-muted">
-            The UI Style Index — Vol. 01
+            The UI Style Index / Vol. 01
           </p>
           <span className="hidden font-mono text-[9px] uppercase tracking-[0.3em] text-muted sm:block">
             Styles / 30
@@ -22,8 +22,8 @@ export default function Home() {
         </h1>
         <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
           <p className="max-w-md text-[12px] leading-snug text-white/60 sm:text-[14px] sm:leading-relaxed">
-            uistyles is a field guide to 30 interface design styles — from Swiss
-            minimalism to synthwave. Each page breaks down the essentials, shows the
+            uistyles is a field guide to 30 interface design styles, from Swiss
+            minimalism to synthwave. Each page covers the essentials, renders the
             core components live, and hands you the Tailwind classes.
           </p>
           <div className="hidden items-center gap-6 font-mono text-[9px] uppercase leading-loose tracking-[0.25em] text-muted sm:flex">
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ── The index — bento of all 30 styles ─────────────── */}
+      {/* ── The index: bento of all 30 styles ─────────────── */}
       <div className="grid grid-cols-2 gap-3 p-3 sm:grid-cols-4 lg:grid-cols-6">
         {ALL_STYLES.map((style, i) => {
           // bento rhythm: every 7th cell is wide
@@ -80,7 +80,7 @@ export default function Home() {
 
       {/* ── Colophon ─────────────────────────────────────── */}
       <footer className="flex flex-col justify-between gap-4 border-t border-line px-6 py-8 font-mono text-[9px] uppercase leading-loose tracking-[0.25em] text-muted sm:flex-row lg:px-12">
-        <span>uistyles — the ui style index</span>
+        <span>uistyles / the ui style index</span>
         <div className="flex flex-wrap gap-x-6 gap-y-1">
           {STYLE_GROUPS.map((g) => (
             <span key={g.name}>{g.name}</span>

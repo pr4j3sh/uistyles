@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ALL_STYLES } from "@/lib/styles";
 
-/** Compact top bar for small screens — the sidebar is desktop-only. */
+/** Compact top bar for small screens. The sidebar is desktop-only. */
 export function MobileBar() {
   const pathname = usePathname();
 

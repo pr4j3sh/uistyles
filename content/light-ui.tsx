@@ -15,8 +15,8 @@ export const lightUi: StyleContent = {
     displayItalicLast: false,
     shadow: "0 1px 3px rgba(17,17,17,0.08), 0 8px 24px rgba(17,17,17,0.06)",
   },
-  what: "Light UI is the clean optimistic workhorse — near-white canvas, hairline borders, ink-dark type, one confident accent. Engineered for sunlit rooms and fast reading; everything is quiet except the task at hand.",
-  origin: "From 2014 Stripe documentation prestige through Vercel/Linear's 2021–22 light themes — the airy counterpart to dark engineering UI, built for daylight and docs.",
+  what: "Light UI is the clean, optimistic workhorse: near-white canvas, hairline borders, ink-dark type, one confident accent. Built for sunlit rooms and fast reading, where everything is quiet except the task at hand.",
+  origin: "It grew from Stripe's documentation in 2014 through the 2021 and 2022 light themes at Vercel and Linear. The airy counterpart to dark engineering UI, made for daylight and docs.",
   bestFor: [
     "Developer docs and marketing-adjacent surfaces",
     "Productivity and task apps",
@@ -25,27 +25,27 @@ export const lightUi: StyleContent = {
   ],
   avoid: [
     "Dark-room engineering contexts",
-    "Heavy data-dense dashboards needing contrast depth",
+    "Heavy data-dense dashboards that need contrast depth",
     "Minimal aesthetic fatigue from Vercel-clone sameness",
   ],
   palette: [
-    { name: "Paper", hex: "#FAFAFA", role: "Canvas — near-white" },
-    { name: "Ink", hex: "#111111", role: "Primary text & primary action" },
+    { name: "Paper", hex: "#FAFAFA", role: "Canvas, near-white" },
+    { name: "Ink", hex: "#111111", role: "Primary text and primary action" },
     { name: "Slate", hex: "#666666", role: "Secondary text" },
-    { name: "Hairline", hex: "#E4E4E7", role: "Borders & dividers" },
+    { name: "Hairline", hex: "#E4E4E7", role: "Borders and dividers" },
     { name: "Mist", hex: "#F1F1F1", role: "Sunken panels" },
-    { name: "Blue", hex: "#0070F3", role: "Accent — focus & links" },
+    { name: "Blue", hex: "#0070F3", role: "Accent, focus and links" },
   ],
   typography: [
-    { role: "Body / UI", family: "Inter — 400 / 500 / 600", note: "14–15px/1.5. 600 for headings, never 700+ — light UI punishes heaviness." },
-    { role: "Display", family: "Inter — 500 / 600", note: "36–56px, tight tracking. Airy by construction, not emptiness." },
-    { role: "Spec", family: "JetBrains Mono — 9–11px", note: "Exit codes, versions, CI tags — uppercase, tracked, dim." },
+    { role: "Body / UI", family: "Inter, 400 / 500 / 600", note: "14-15px/1.5. 600 for headings, never 700 or above. Heavy type fights the airy page." },
+    { role: "Display", family: "Inter, 500 / 600", note: "36 to 56px, tight tracking. Airy by construction, not emptiness." },
+    { role: "Spec", family: "JetBrains Mono, 9-11px", note: "Exit codes, versions, CI tags. Uppercase, tracked, dim." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "The black slab — Vercel's primary action. Ink-filled, white text, no glow; hover darkens one stop. The accent blue belongs to links and focus, not this button.",
+        "The black slab, Vercel's primary action. Ink fill, white text, no glow; hover darkens one stop. The accent blue belongs to links and focus, not this button.",
       code: `export const PrimaryButton = () => (
   <button className="h-10 inline-flex items-center gap-2 rounded-md bg-[#111111] px-5 text-sm font-medium text-white transition-colors hover:bg-[#2E2E2E] active:bg-[#1A1A1A]">
     Get started
@@ -66,7 +66,7 @@ export const lightUi: StyleContent = {
     {
       name: "Input",
       description:
-        "A sunken mist field — hairline handles focus with the accent blue; no glow, no ring, just the 1px lighting up. Caret matches accent.",
+        "A sunken mist field. The hairline handles focus with accent blue: no glow, no ring, just the 1px line lighting up. The caret matches the accent.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-mono text-[9px] uppercase tracking-[0.28em] text-[#666666]">Email</span>
@@ -94,7 +94,7 @@ export const lightUi: StyleContent = {
     {
       name: "Badge",
       description:
-        "A quiet chip — white on hairline with the accent blue for the one thing that matters. Everything else gray.",
+        "A quiet chip: white on hairline with accent blue for the one thing that matters. Everything else gray.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 rounded-md border border-[#E4E4E7] bg-white px-3 py-1 font-mono text-[9px] font-medium uppercase tracking-[0.28em] text-[#0070F3]">
     Stable
@@ -115,7 +115,7 @@ export const lightUi: StyleContent = {
     {
       name: "Card",
       description:
-        "A white card on paper — hairline, soft shadow, hairline kicker. No color except one blue link; the task is the hero.",
+        "A white card on paper: hairline, soft shadow, hairline kicker. No color except one blue link; the task is the hero.",
       code: `export const ChangelogCard = () => (
   <article className="w-64 rounded-md border border-[#E4E4E7] bg-white p-4 shadow-[0_1px_2px_rgba(17,17,17,0.06)]">
     <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#0070F3]">EXIT / 0</p>
@@ -137,7 +137,7 @@ export const lightUi: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "Hairline bottom rail — paper background, gray wordmark, blue dot. No elevation, no brand; the docs are the hero.",
+        "Hairline bottom rail: paper background, gray wordmark, blue dot. No elevation, no brand; the docs are the hero.",
       code: `export const NavBar = () => (
   <header className="flex h-12 w-full items-center justify-between border-b border-[#E4E4E7] bg-[#FAFAFA] px-4">
     <span className="font-mono text-[13px] font-medium tracking-tight text-[#111111]">acme<span className="text-[#0070F3]">.</span></span>
@@ -170,15 +170,15 @@ export const lightUi: StyleContent = {
     },
   ],
   dos: [
-    "Hairline borders separate everything — card, row, column; shadow only on cards",
-    "Accent blue = focus and links only — primary action is always black slab",
-    "Ink-dark text, never pure #000 — #111 keeps the page from slapping",
-    "Whitespace is the budget — keep cells generous, airy, quiet",
+    "Hairline borders separate everything: card, row, column. Shadow only on cards.",
+    "Accent blue is for focus and links only. The primary action is always a black slab.",
+    "Use ink-dark text, never pure #000. #111 keeps the page from slapping.",
+    "Whitespace is the budget. Keep cells generous, airy and quiet.",
   ],
   donts: [
-    "Don't use glows — light UI uses shadows, never bloom",
-    "Don't add color for variety — black / gray / one blue; stop there",
-    "Don't set body text above 600 — light UI punishes heaviness",
-    "Don't stack more than two elevation levels — paper / white; done",
+    "Don't use glows. Light UI uses shadows, never bloom.",
+    "Don't add color for variety. Black, gray, one blue; stop there.",
+    "Don't set body text above 600. Heavy type fights the airy page.",
+    "Don't stack more than two elevation levels. Paper and white; done.",
   ],
 };

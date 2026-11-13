@@ -14,8 +14,8 @@ export const editorialDesign: StyleContent = {
     display: "font-serif tracking-tight",
     displayItalicLast: true,
   },
-  what: "Editorial design treats the page like a magazine spread — typography first, imagery as documentary support, hierarchy told through kicker, hed, dek and byline. It is the visual grammar of considered publishing: every element has a reading order and a reason to exist.",
-  origin: "From broadsheets and literary magazines through the New York Times web era to Substack and Ghost, editorial design is what happens when a publication trusts its typography more than its chrome — the page reads like print translated to screen.",
+  what: "Editorial design treats the page like a magazine spread. Typography leads, imagery supports the story, and hierarchy runs through kicker, hed, dek and byline. Every element has a reading order and a reason to be there.",
+  origin: "It runs from broadsheets and literary magazines through the New York Times web era to Substack and Ghost. Editorial design is what happens when a publication trusts its typography more than its chrome, so the page reads like print on a screen.",
   bestFor: [
     "Newsletters and independent publishing",
     "Media brands with a point of view",
@@ -28,7 +28,7 @@ export const editorialDesign: StyleContent = {
     "Flows where scanning a table beats reading an argument",
   ],
   palette: [
-    { name: "Paper", hex: "#FDFBF7", role: "Ground — warm stock" },
+    { name: "Paper", hex: "#FDFBF7", role: "Ground, warm stock" },
     { name: "Ink", hex: "#141414", role: "Body type" },
     { name: "Oxblood", hex: "#8C2B1D", role: "Kickers & rules" },
     { name: "Gray", hex: "#6B6660", role: "Bylines & captions" },
@@ -36,15 +36,15 @@ export const editorialDesign: StyleContent = {
     { name: "Sand", hex: "#F3EFE7", role: "Sunken panels & pull-quotes" },
   ],
   typography: [
-    { role: "Display", family: "Instrument Serif — 400 italic & roman", note: "Heds at 44–72px, tight leading, optical alignment. Italic for emphasis, not whole sentences." },
-    { role: "Body", family: "Inter — 400 / 500", note: "16–17px/1.6 on a 60–75ch measure. Flush-left, ragged-right, hyphenate rarely." },
-    { role: "Kicker / Byline", family: "JetBrains Mono — 9–11px", note: "Uppercase, tracked, oxblood for kickers; gray for bylines and folio metadata." },
+    { role: "Display", family: "Instrument Serif, 400 italic and roman", note: "Heds at 44 to 72px with tight leading and optical alignment. Italic for emphasis, not whole sentences." },
+    { role: "Body", family: "Inter, 400 / 500", note: "16-17px/1.6 on a 60 to 75ch measure. Flush left, ragged right, hyphenate rarely." },
+    { role: "Kicker / Byline", family: "JetBrains Mono, 9-11px", note: "Uppercase and tracked. Oxblood for kickers, gray for bylines and folio metadata." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "An understated, letter-pressed control — hairline black border, tracked caps, generous padding; fills black (or oxblood) on hover. Nothing glows, nothing floats.",
+        "An understated, letter-pressed control: hairline black border, tracked caps, generous padding. It fills black or oxblood on hover. Nothing glows, nothing floats.",
       code: `export const PrimaryButton = () => (
   <button className="inline-flex items-center gap-3 border border-[#141414] bg-transparent px-6 py-3 font-sans text-[11px] font-semibold uppercase tracking-[0.25em] text-[#141414] transition-colors hover:bg-[#141414] hover:text-[#FDFBF7]">
     Subscribe
@@ -65,7 +65,7 @@ export const editorialDesign: StyleContent = {
     {
       name: "Input",
       description:
-        "A field that reads like a line in a letter — hairline rule under the value, uppercase micro-label above, focus thickens the rule to oxblood. Fill is optional and always paper-toned.",
+        "A field that reads like a line in a letter: hairline rule under the value, uppercase micro-label above, focus thickens the rule to oxblood. The fill is optional and always paper-toned.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-[#6B6660]">Email</span>
@@ -93,7 +93,7 @@ export const editorialDesign: StyleContent = {
     {
       name: "Badge",
       description:
-        "A kicker you can press. Hairline-bordered, tracked caps, oxblood or ink on paper — never a filled pill; this is a magazine, not an app bar.",
+        "A kicker you can press. Hairline border, tracked caps, oxblood or ink on paper. Never a filled pill; this is a magazine, not an app bar.",
       code: `export const KickerChip = () => (
   <button className="inline-flex items-center gap-2 border border-[#8C2B1D] bg-transparent px-3 py-1 font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-[#8C2B1D] transition-colors hover:bg-[#8C2B1D] hover:text-[#FDFBF7]">
     Culture
@@ -117,7 +117,7 @@ export const editorialDesign: StyleContent = {
     {
       name: "Card",
       description:
-        "The article card. Oxblood kicker, one line hed in serif, byline in tracked caps — the hairline below does the cropping, the hed does the persuading.",
+        "The article card: oxblood kicker, one line hed in serif, byline in tracked caps. The hairline below does the cropping, and the hed does the persuading.",
       code: `export const ArticleCard = () => (
   <article className="w-64 border-t-2 border-[#141414] bg-white py-4">
     <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-[#8C2B1D]">The Grid</p>
@@ -139,7 +139,7 @@ export const editorialDesign: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "The masthead: serif wordmark at real size, section names tracked in caps below a double rule — two hairlines, one thick one thin — the NYT trick.",
+        "The masthead: serif wordmark at real size, section names tracked in caps below a double rule, one thick and one thin. It is the old newspaper trick.",
       code: `export const Masthead = () => (
   <header className="flex h-16 w-full items-center justify-between border-y-4 border-double border-t-[3px] border-b border-[#141414] bg-[#FDFBF7] px-6">
     <span className="font-serif text-2xl tracking-tight text-[#141414]">The Ledger</span>
@@ -172,15 +172,15 @@ export const editorialDesign: StyleContent = {
     },
   ],
   dos: [
-    "Keep measure at 60–75 characters — the line length is the design",
-    "Use kicker → hed → dek → byline in that exact order, every time",
-    "Double-rule the masthead: thick hairline above, thin below",
-    "One oxblood kicker per screen; everything else stays ink and paper",
+    "Keep the measure at 60 to 75 characters. Line length is the design.",
+    "Use kicker, hed, dek, byline in that order, every time.",
+    "Double-rule the masthead: thick hairline above, thin below.",
+    "One oxblood kicker per screen. Everything else stays ink and paper.",
   ],
   donts: [
-    "Don't center paragraphs — flush-left is non-negotiable",
-    "Don't exceed two typefaces — serif display, grotesque body, done",
-    "Don't fill blocks with solid color — rules and type are the structure",
-    "Don't use drop shadows, glows or rounded UI chrome",
+    "Don't center paragraphs. Flush left is non-negotiable.",
+    "Don't exceed two typefaces: serif display, grotesque body, done.",
+    "Don't fill blocks with solid color. Rules and type are the structure.",
+    "Don't use drop shadows, glows or rounded UI chrome.",
   ],
 };

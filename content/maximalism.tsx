@@ -16,8 +16,8 @@ export const maximalism: StyleContent = {
     displayItalicLast: true,
     shadow: "0 10px 30px rgba(0,0,0,0.55), inset 0 1px 0 rgba(232,180,74,0.25)",
   },
-  what: "Maximalism is abundance as methodology — pattern on pattern, velvet, gold, deeper inks, dense type, ornament that refuses to apologize. The restraint is not in the palette but in the hierarchy: many voices, one conductor.",
-  origin: "From Victorian eclecticism through 70s psychedelia to the 2010s Wallpaper* / Gucci / Kenzo revival — a deliberate counter-argument to a decade of minimalism, built by designers who saw subtraction as a form of censorship.",
+  what: "Maximalism is abundance as methodology: pattern on pattern, velvet, gold, deeper inks, dense type, ornament that refuses to apologize. The restraint is not in the palette but in the hierarchy. Many voices, one conductor.",
+  origin: "It runs from Victorian eclecticism through 70s psychedelia to the 2010s Wallpaper*, Gucci and Kenzo revival. It was a deliberate counter-argument to a decade of minimalism, built by designers who saw subtraction as a form of censorship.",
   bestFor: [
     "Fashion, beauty and fragrance",
     "Music and nightlife identity",
@@ -32,21 +32,21 @@ export const maximalism: StyleContent = {
   palette: [
     { name: "Royal", hex: "#2A1128", role: "Deep aubergine canvas" },
     { name: "Plum", hex: "#3A1836", role: "Velvet surface" },
-    { name: "Gold", hex: "#E8B44A", role: "Precision accent — the one precious thing" },
+    { name: "Gold", hex: "#E8B44A", role: "Precision accent, the one precious thing" },
     { name: "Coral", hex: "#FF6B4A", role: "Secondary flare" },
     { name: "Emerald", hex: "#1F7A55", role: "Jewel depth" },
     { name: "Blush", hex: "#F6E8E4", role: "Porcelain ink" },
   ],
   typography: [
-    { role: "Display", family: "Instrument Serif — 400 italic & roman", note: "52–96px with flourishes; italic for the ostentatious clause, roman for the verb." },
-    { role: "Body", family: "Inter — 400 / 500", note: "14–15px on aubergine needs weight 500 to survive pairing with serifs." },
-    { role: "Metadata", family: "JetBrains Mono — 9–11px", note: "House sigil strings — CHAP. / AURELIA / 014. Tracked caps, gold on plum." },
+    { role: "Display", family: "Instrument Serif, 400 italic and roman", note: "52 to 96px with flourishes. Italic for the ostentatious clause, roman for the verb." },
+    { role: "Body", family: "Inter, 400 / 500", note: "14-15px on aubergine needs weight 500 to survive pairing with serifs." },
+    { role: "Metadata", family: "JetBrains Mono, 9-11px", note: "House sigil strings: CHAP. / AURELIA / 014. Tracked caps, gold on plum." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "A gold coin pressed into velvet. Serif italic caps, thick gold border, deep outer shadow — clicking costs you nothing, looking away costs you everything.",
+        "A gold coin pressed into velvet. Serif italic caps, thick gold border, deep outer shadow. Clicking costs you nothing; looking away costs you everything.",
       code: `export const PrimaryButton = () => (
   <button className="h-12 rounded-sm border-2 border-[#E8B44A] bg-gradient-to-b from-[#F5D06F] via-[#E8B44A] to-[#B8802A] px-7 font-serif text-base italic text-[#2A1128] shadow-[0_6px_18px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.6)] [text-shadow:0_1px_0_rgba(255,255,255,0.4)] transition-transform hover:scale-[1.03]">
     Get started
@@ -67,7 +67,7 @@ export const maximalism: StyleContent = {
     {
       name: "Input",
       description:
-        "A leather-bound field. Plum fill, gold hairline on focus with a soft glow, porcelain serif italic placeholder — never sans on velvet.",
+        "A leather-bound field. Plum fill, gold hairline on focus with a soft glow, porcelain serif italic placeholder. Never sans on velvet.",
       code: `export const EmailField = () => (
   <label className="block w-60">
     <span className="mb-2 block font-sans text-[9px] uppercase tracking-[0.35em] text-[#E8B44A]">Email</span>
@@ -95,7 +95,7 @@ export const maximalism: StyleContent = {
     {
       name: "Badge",
       description:
-        "A gilded wax-seal chip. Emerald-on-gold fill, filigree-adjacent border — the kind of mark stamped by a concierge desk you can't afford.",
+        "A gilded wax-seal chip. Emerald-on-gold fill, filigree-adjacent border. The kind of mark stamped by a concierge desk you can't afford.",
       code: `export const StatusBadge = () => (
   <span className="inline-flex items-center gap-2 rounded-sm border border-[#E8B44A] bg-[#1F7A55] px-3 py-1.5 font-sans text-[9px] font-bold uppercase tracking-[0.3em] text-[#F6E8E4] shadow-[0_2px_6px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.2)]">
     Stable
@@ -140,7 +140,7 @@ export const maximalism: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "A gilded theatre proscenium — serif wordmark, gold rules top and bottom, no icons because ornament IS the iconography.",
+        "A gilded theatre proscenium: serif wordmark, gold rules top and bottom, no icons because ornament is the iconography.",
       code: `export const NavBar = () => (
   <header className="flex h-16 w-full items-center justify-between border-y-2 border-[#E8B44A] bg-[#2A1128] px-6">
     <span className="font-serif text-2xl italic tracking-tight text-[#F6E8E4]">acme<span className="not-italic text-[#E8B44A]">❦</span></span>
@@ -173,15 +173,15 @@ export const maximalism: StyleContent = {
     },
   ],
   dos: [
-    "Anchor one precious thing per screen (gold, usually) — everything else serves it",
-    "Layer 2–3 patterns max — velvet + filigree + stripe is a composition, not a mess",
-    "Serif italic for the ostentatious clause; roman for the verb",
-    "Give body text a solid velvet backing — dense pages need resting velvet",
+    "Anchor one precious thing per screen, usually gold. Everything else serves it.",
+    "Layer 2 to 3 patterns max. Velvet, filigree and stripe is a composition, not a mess.",
+    "Use serif italic for the ostentatious clause and roman for the verb.",
+    "Give body text a solid velvet backing. Dense pages need resting velvet.",
   ],
   donts: [
-    "Don't add a fourth pattern — confetti, velvet, filigree; stop",
-    "Don't use white sans on saturated fills — reads as a food menu",
-    "Don't round more than 2px — geometry stays himalayan",
-    "Don't 'maximize' without a hierarchy — it's organized excess or it's chaos",
+    "Don't add a fourth pattern. Confetti, velvet, filigree; stop.",
+    "Don't use white sans on saturated fills. It reads as a food menu.",
+    "Don't round more than 2px. Keep the geometry sharp.",
+    "Don't maximize without a hierarchy. It's organized excess or it's chaos.",
   ],
 };

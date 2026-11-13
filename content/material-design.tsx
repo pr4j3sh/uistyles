@@ -14,8 +14,8 @@ export const materialDesign: StyleContent = {
     display: "font-sans font-normal tracking-[-0.02em]",
     displayItalicLast: false,
   },
-  what: "Material 3 — 'Material You' — is Google's living design system: a dynamic, tonal color system (every color has an 'on' pair for contrast), state layers on every interactive surface, springy motion, and elevation expressed through shadow. Surfaces are nested layers of slightly different tones, never hard black-on-white.",
-  origin: "Material Design launched at Google I/O 2014 as 'material metaphor' — paper and ink with physical light. Material You (2021) rewrote it around dynamic, seed-derived color and accessibility-first contrast pairs; it is the design language of Android, Pixel and Google Workspace.",
+  what: "Material 3, also called Material You, is Google's living design system. It pairs a dynamic tonal palette (every color has an 'on' pair for contrast) with state layers, springy motion and shadows that express elevation. Surfaces are nested tones, never hard black on white.",
+  origin: "Material Design launched at Google I/O in 2014 with a 'material metaphor' of paper and ink under physical light. Material You arrived in 2021 and rebuilt the system around seed-derived color and accessible contrast pairs. It now shapes Android, Pixel and Google Workspace.",
   bestFor: [
     "Android / cross-platform consumer apps",
     "Product suites that need one living system",
@@ -36,15 +36,15 @@ export const materialDesign: StyleContent = {
     { name: "Outline Variant", hex: "#CAC4D0", role: "Filled-field borders & chips" },
   ],
   typography: [
-    { role: "Body / UI", family: "Roboto Flex — 400 / 500", note: "Variable width axis; set body at 14–16px. Use 500 for buttons and chips." },
-    { role: "Display", family: "Roboto Display — 400 / 500", note: "Tight, light headlines at large sizes; avoid bold display type." },
-    { role: "Metadata", family: "JetBrains Mono — 9–11px", note: "Used sparingly — chips, section kickers, build tags." },
+    { role: "Body / UI", family: "Roboto Flex, 400 / 500", note: "Variable width axis. Set body at 14 to 16px, with 500 for buttons and chips." },
+    { role: "Display", family: "Roboto Display, 400 / 500", note: "Tight, light headlines at large sizes. Avoid bold display type." },
+    { role: "Metadata", family: "JetBrains Mono, 9-11px", note: "Used sparingly for chips, section kickers and build tags." },
   ],
   components: [
     {
       name: "Button",
       description:
-        "Filled and tonal buttons, both pill-shaped, both carrying a state layer — hover and press tint the surface itself rather than swapping the whole color. No gradients, ever.",
+        "Filled and tonal buttons, both pill-shaped and both carrying a state layer. Hover and press tint the surface instead of swapping the fill. No gradients.",
       code: `export const PrimaryButton = () => (
   <button className="h-10 rounded-full bg-[#6750A4] px-6 text-sm font-medium text-white shadow-[0_1px_3px_rgba(0,0,0,0.3),0_1px_2px_rgba(0,0,0,0.15)] transition-shadow hover:shadow-[0_2px_6px_rgba(0,0,0,0.35),0_1px_2px_rgba(0,0,0,0.2)]">
     Get started
@@ -65,7 +65,7 @@ export const materialDesign: StyleContent = {
     {
       name: "Input",
       description:
-        "The filled text field: rounded top, quiet container fill, 2px bottom keyline. Label floats on focus — placeholder disappears on interaction, never doubles as a label.",
+        "The filled text field: rounded top, quiet container fill, two-pixel bottom keyline. The label floats on focus and the placeholder disappears. It never doubles as a label.",
       code: `export const EmailField = () => (
   <label className="relative block w-64">
     <input
@@ -97,7 +97,7 @@ export const materialDesign: StyleContent = {
     {
       name: "Badge",
       description:
-        "M3 chips. Assist chips are outlined pills; the selected chip flips to filled primary-container with a checkmark. Filter chips, not tags.",
+        "M3 chips. Assist chips are outlined pills, and a selected chip flips to filled primary-container with a checkmark. These are filter chips, not tags.",
       code: `export const AssistChip = () => (
   <button className="h-8 rounded-lg border border-[#CAC4D0] bg-transparent px-3 text-sm font-medium text-[#1D1B20] transition-colors hover:bg-[#1D1B20]/5">
     Changelog
@@ -126,7 +126,7 @@ export const materialDesign: StyleContent = {
     {
       name: "Card",
       description:
-        "The elevated container: a tonally-shifted surface carrying elevation 1. Never pure white on pure white — the tone shift IS the elevation system.",
+        "The elevated container: a tonally shifted surface at elevation 1. Never white on white, because the tone shift is the elevation system.",
       code: `export const ChangelogCard = () => (
   <div className="w-64 rounded-xl bg-[#ECE6F0] p-4 shadow-[0_1px_2px_rgba(0,0,0,0.25),0_1px_3px_rgba(0,0,0,0.12)]">
     <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-[#49454F]">
@@ -160,7 +160,7 @@ export const materialDesign: StyleContent = {
     {
       name: "Nav bar",
       description:
-        "The small top app bar: tonal surface, nav icon left, three action icons right. Resting state casts no shadow — elevation arrives on scroll.",
+        "The small top app bar: tonal surface, nav icon left, three action icons right. It casts no shadow at rest; elevation arrives when the page scrolls.",
       code: `export const NavBar = () => (
   <header className="flex h-16 w-full items-center gap-2 bg-[#F3EDF7] px-2">
     <button aria-label="Open menu" className="flex h-12 w-12 items-center justify-center rounded-full text-[#1D1B20] transition-colors hover:bg-[#1D1B20]/5">
@@ -195,15 +195,15 @@ export const materialDesign: StyleContent = {
     },
   ],
   dos: [
-    "Tint surfaces, not borders — nested tones ARE the elevation system",
-    "Put a state layer on every interactive surface — hover tints, never swaps hue",
-    "Pair every color with its 'on' color and check the contrast pair",
-    "Use pill buttons, tonal chips and rounded 12–28px shapes deliberately",
+    "Tint surfaces instead of drawing borders. Nested tones are the elevation system.",
+    "Put a state layer on every interactive surface. Hover tints; it never swaps hue.",
+    "Pair every color with its 'on' color and check the contrast.",
+    "Use pill buttons, tonal chips and 12 to 28px rounding on purpose.",
   ],
   donts: [
-    "Don't use pure black on colored surfaces — ink is a color too",
-    "Don't outline everything — filled + tonal covers the same jobs",
-    "Don't flatten elevation into borders — shadow communicates depth",
-    "Don't invent a seed per screen — one seed, one dynamic palette",
+    "Don't use pure black on colored surfaces. Ink is a color too.",
+    "Don't outline everything. Filled and tonal surfaces cover the same jobs.",
+    "Don't flatten elevation into borders. Shadow communicates depth.",
+    "Don't invent a seed per screen. One seed, one dynamic palette.",
   ],
 };
