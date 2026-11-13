@@ -45,10 +45,7 @@ export function Sidebar() {
   const groups = STYLE_GROUPS.map((group) => ({
     ...group,
     styles: group.styles.filter(
-      (style) =>
-        !q ||
-        style.name.toLowerCase().includes(q) ||
-        style.slug.includes(q),
+      (style) => !q || style.name.toLowerCase().includes(q) || style.slug.includes(q),
     ),
   })).filter((group) => group.styles.length > 0);
 
@@ -69,15 +66,27 @@ export function Sidebar() {
         className="absolute -right-3 top-16 z-50 flex h-6 w-6 items-center justify-center rounded-full border border-line bg-panel-2 text-muted shadow-[0_4px_14px_rgba(0,0,0,0.5)] transition-colors hover:text-paper"
       >
         <svg
-          width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden
+          width="10"
+          height="10"
+          viewBox="0 0 10 10"
+          fill="none"
+          aria-hidden
           className={`transition-transform duration-300 ${collapsed ? "rotate-180" : ""}`}
         >
-          <path d="M6.2 1.5L3.4 5l2.8 3.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M6.2 1.5L3.4 5l2.8 3.5"
+            stroke="currentColor"
+            strokeWidth="1.3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </button>
 
       {/* brand */}
-      <div className={`border-b border-line ${collapsed ? "px-2 pb-4 pt-6" : "px-6 pb-5 pt-6"}`}>
+      <div
+        className={`shrink-0 border-b border-line ${collapsed ? "px-2 pb-4 pt-6" : "px-6 pb-5 pt-6"}`}
+      >
         <Link
           href="/"
           data-cursor
@@ -100,7 +109,9 @@ export function Sidebar() {
                 </span>
               </div>
               <p className="mt-2 font-mono text-[10px] uppercase leading-relaxed tracking-[0.18em] text-muted">
-                The UI Style Index — 30 styles,<br />one language.
+                The UI Style Index — 30 styles,
+                <br />
+                one language.
               </p>
             </>
           )}
@@ -133,14 +144,21 @@ export function Sidebar() {
           >
             <svg width="13" height="13" viewBox="0 0 12 12" fill="none" aria-hidden>
               <circle cx="5.5" cy="5.5" r="4" stroke="currentColor" strokeWidth="1.2" />
-              <path d="M8.7 8.7L11 11" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+              <path
+                d="M8.7 8.7L11 11"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+              />
             </svg>
           </button>
         )}
       </div>
 
       {/* style index */}
-      <nav className={`hscroll flex-1 overflow-y-auto ${collapsed ? "px-1.5 py-3" : "px-3 py-4"}`}>
+      <nav
+        className={`hscroll min-h-0 flex-1 overflow-y-auto ${collapsed ? "px-1.5 py-3" : "px-3 py-4"}`}
+      >
         {groups.map((group) => (
           <div key={group.name} className="mb-5">
             {collapsed ? (
@@ -171,7 +189,10 @@ export function Sidebar() {
                           ? collapsed
                             ? "bg-paper text-ink"
                             : "border-paper bg-white/[0.06] text-paper"
-                          : "text-muted hover:text-paper " + (collapsed ? "" : "border-transparent hover:border-white/20 hover:bg-white/[0.03]")
+                          : "text-muted hover:text-paper " +
+                            (collapsed
+                              ? ""
+                              : "border-transparent hover:border-white/20 hover:bg-white/[0.03]")
                       } ${collapsed && active ? "rounded-sm" : ""}`}
                     >
                       <span
@@ -208,23 +229,44 @@ export function Sidebar() {
           </div>
         ))}
         {!collapsed && groups.length === 0 && (
-          <p className="px-3 py-6 font-mono text-[11px] text-muted">
-            No styles match “{query}”.
-          </p>
+          <p className="px-3 py-6 font-mono text-[11px] text-muted">No styles match “{query}”.</p>
         )}
       </nav>
 
       {/* footer */}
-      <div className={`border-t border-line ${collapsed ? "px-2 py-4" : "px-6 py-4"}`}>
+      <div className={`shrink-0 border-t border-line ${collapsed ? "px-2 py-4" : "px-6 py-4"}`}>
         {collapsed ? (
           <p className="text-center font-mono text-[9px] text-muted/70" title="uistyles © 2026">
             ©26
           </p>
         ) : (
-          <p className="font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/70">
-            uistyles © 2026<br />
-            Learn the look. Steal the classes.
-          </p>
+          <div className="space-y-2">
+            <a
+              href="https://github.com/pr4j3sh/uistyles"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor
+              data-cursor-label="GitHub"
+              className="group flex items-baseline justify-between font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/70 transition-colors hover:text-paper"
+            >
+              Source
+              <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+            </a>
+            <a
+              href="https://pr4j3sh.github.io/pr4j3sh/"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor
+              data-cursor-label="Profile"
+              className="group flex items-baseline justify-between font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/70 transition-colors hover:text-paper"
+            >
+              pr4j3sh
+              <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+            </a>
+            <p className="pt-1 font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/40">
+              uistyles © 2026
+            </p>
+          </div>
         )}
       </div>
     </aside>

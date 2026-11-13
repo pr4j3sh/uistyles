@@ -5,6 +5,7 @@ import { materialDesign } from "@/content/material-design";
 import { swissDesign } from "@/content/swiss-design";
 import { editorialDesign } from "@/content/editorial-design";
 import { typographyDriven } from "@/content/typography-driven";
+import { neumorphism } from "@/content/neumorphism";
 
 /** Registry of fully-written style contents, keyed by slug. */
 export const STYLE_CONTENTS: Record<string, StyleContent> = {
@@ -14,4 +15,5 @@ export const STYLE_CONTENTS: Record<string, StyleContent> = {
   "swiss-design": swissDesign,
   "editorial-design": editorialDesign,
   "typography-driven": typographyDriven,
+  "neumorphism": neumorphism,
 };
