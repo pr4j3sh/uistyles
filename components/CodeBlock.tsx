@@ -1,15 +1,32 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import Prism from "prismjs";
-import "prismjs/components/prism-markup";
-import "prismjs/components/prism-css";
-import "prismjs/components/prism-javascript";
-import "prismjs/components/prism-typescript";
-import "prismjs/components/prism-jsx";
-import "prismjs/components/prism-tsx";
+import { useEffect, useState } from "react";
+import { copyToClipboard } from "@/lib/clipboard";
+
+/**
+ * Prism + the TSX grammar are dynamically imported on mount (sequentially, so
+ * the load-order dependencies hold), keeping them out of the initial client
+ * bundle. Until the highlight lands, the raw code is rendered unstyled.
+ */
+async function highlight(code: string): Promise<string> {
+  const Prism = (await import("prismjs")).default;
+  await import("prismjs/components/prism-markup");
+  await import("prismjs/components/prism-css");
+  await import("prismjs/components/prism-javascript");
+  await import("prismjs/components/prism-typescript");
+  await import("prismjs/components/prism-jsx");
+  await import("prismjs/components/prism-tsx");
+  return Prism.highlight(code, Prism.languages.tsx ?? {}, "tsx");
+}
 
 /** Code block themed to the active style page (var(--s-*)), syntax-highlighted. */
+/**
+ * SECURITY: `dangerouslySetInnerHTML` renders Prism's output. Prism escapes the
+ * code it highlights and every `code` string in this repo is authored, not
+ * user-supplied — that invariant must hold. Do not feed this component
+ * unsanitized external input; swap in a sanitizer (e.g. DOMPurify) if you ever
+ * do.
+ */
 export function CodeBlock({
   code,
   label = "tsx + tailwind",
@@ -18,23 +35,24 @@ export function CodeBlock({
   label?: string;
 }) {
   const [copied, setCopied] = useState(false);
+  const [html, setHtml] = useState<string | null>(null);
 
-  const html = useMemo(
-    () => Prism.highlight(code, Prism.languages.tsx, "tsx"),
-    [code],
-  );
+  useEffect(() => {
+    let cancelled = false;
+    highlight(code)
+      .then((h) => {
+        if (!cancelled) setHtml(h);
+      })
+      .catch(() => {
+        /* keep the raw code fallback */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [code]);
 
   const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(code);
-    } catch {
-      const ta = document.createElement("textarea");
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
-    }
+    await copyToClipboard(code);
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1600);
   };
@@ -94,7 +112,11 @@ export function CodeBlock({
         className="codeblock h-36 flex-none overflow-y-auto overflow-x-hidden whitespace-pre-wrap [overflow-wrap:anywhere] px-3 py-2 font-mono text-[9.5px] leading-[1.5]"
         style={{ color: "color-mix(in srgb, var(--s-text) 88%, transparent)" }}
       >
-        <code dangerouslySetInnerHTML={{ __html: html }} />
+        {html !== null ? (
+          <code dangerouslySetInnerHTML={{ __html: html }} />
+        ) : (
+          <code>{code}</code>
+        )}
       </pre>
     </div>
   );
