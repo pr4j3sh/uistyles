@@ -63,7 +63,7 @@ export function StylePage({
               </svg>
             </Link>
             <span className="s-chip hidden px-2.5 py-1.5 font-mono text-[9px] uppercase tracking-[0.3em] sm:block" style={{ borderRadius: "calc(var(--s-radius) / 2)" }}>
-              Style {String(meta.index).padStart(2, "0")} / 30
+              Style {String(meta.index).padStart(2, "0")} / {ALL_STYLES.length}
             </span>
             <span className="s-muted hidden font-mono text-[9px] uppercase tracking-[0.3em] lg:block">
               {meta.category}

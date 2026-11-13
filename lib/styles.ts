@@ -82,6 +82,7 @@ export const STYLE_GROUPS: StyleGroup[] = [
       s("monochromatic-design", "Monochromatic Design", "One hue, infinite depth.", 28, "Systems & Surfaces", "available"),
       s("industrial-ui", "Industrial UI", "Machined, utilitarian, built to last.", 29, "Systems & Surfaces", "available"),
       s("terminal-ui", "Terminal-inspired UI", "Green phosphor and plain text.", 30, "Systems & Surfaces", "available"),
+      s("grayscale-ui", "Grayscale UI", "Black, white and every gray between.", 31, "Systems & Surfaces", "available"),
     ],
   },
 ];

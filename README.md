@@ -1,6 +1,6 @@
 # uistyles
 
-The UI Style Index: 30 interface design styles, one page each. Learn the basics of a style through a fully rendered page, then copy the Tailwind classes.
+The UI Style Index: 31 interface design styles, one page each. Learn the basics of a style through a fully rendered page, then copy the Tailwind classes.
 
 ## Develop
 

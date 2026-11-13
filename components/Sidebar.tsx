@@ -109,7 +109,7 @@ export function Sidebar() {
                 </span>
               </div>
               <p className="mt-2 font-mono text-[10px] uppercase leading-relaxed tracking-[0.18em] text-muted">
-                The UI Style Index: 30 styles,
+                The UI Style Index: 31 styles,
                 <br />
                 one language.
               </p>

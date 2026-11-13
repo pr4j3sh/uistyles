@@ -11,7 +11,7 @@ export default function Home() {
             The UI Style Index / Vol. 01
           </p>
           <span className="hidden font-mono text-[9px] uppercase tracking-[0.3em] text-muted sm:block">
-            Styles / 30
+            Styles / 31
           </span>
         </div>
         <h1
@@ -22,12 +22,12 @@ export default function Home() {
         </h1>
         <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
           <p className="max-w-md text-[12px] leading-snug text-white/60 sm:text-[14px] sm:leading-relaxed">
-            uistyles is a field guide to 30 interface design styles, from Swiss
+            uistyles is a field guide to 31 interface design styles, from Swiss
             minimalism to synthwave. Each page covers the essentials, renders the
             core components live, and hands you the Tailwind classes.
           </p>
           <div className="hidden items-center gap-6 font-mono text-[9px] uppercase leading-loose tracking-[0.25em] text-muted sm:flex">
-            <span>30 styles</span>
+            <span>31 styles</span>
             <span className="h-3 w-px bg-white/15" />
             <span>6 families</span>
             <span className="h-3 w-px bg-white/15" />
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ── The index: bento of all 30 styles ─────────────── */}
+      {/* ── The index: bento of all 31 styles ─────────────── */}
       <div className="grid grid-cols-2 gap-3 p-3 sm:grid-cols-4 lg:grid-cols-6">
         {ALL_STYLES.map((style, i) => {
           // bento rhythm: every 7th cell is wide

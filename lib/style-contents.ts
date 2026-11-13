@@ -29,6 +29,7 @@ import { bentoGridDesign } from "@/content/bento-grid-design";
 import { monochromaticDesign } from "@/content/monochromatic-design";
 import { industrialUi } from "@/content/industrial-ui";
 import { terminalUi } from "@/content/terminal-ui";
+import { grayscaleUi } from "@/content/grayscale-ui";
 
 /** Registry of fully-written style contents, keyed by slug. */
 export const STYLE_CONTENTS: Record<string, StyleContent> = {
@@ -62,4 +63,5 @@ export const STYLE_CONTENTS: Record<string, StyleContent> = {
   "monochromatic-design": monochromaticDesign,
   "industrial-ui": industrialUi,
   "terminal-ui": terminalUi,
+  "grayscale-ui": grayscaleUi,
 };
