@@ -37,7 +37,7 @@ export function StylePage({
       style={themeVars}
     >
       {/* ── Row 1: themed hero band (40vh) ───────────────── */}
-      <header className="relative flex h-[40vh] shrink-0 flex-col justify-between overflow-hidden border-b px-5 pb-5 pt-4 lg:px-8 lg:pt-5" style={{ borderColor: "var(--s-line)" }}>
+      <header className="relative flex h-[30vh] shrink-0 flex-col justify-between overflow-hidden border-b px-5 pb-4 pt-3 lg:h-[40vh] lg:px-8 lg:pb-5 lg:pt-5" style={{ borderColor: "var(--s-line)" }}>
         {/* watermark index */}
         <span
           aria-hidden
@@ -102,7 +102,7 @@ export function StylePage({
         <div className="relative">
           <h1
             className={`s-text leading-[0.92] tracking-tight ${theme.display ?? "font-serif"}`}
-            style={{ fontSize: theme.displaySize ?? "clamp(3rem, 11vh, 6.5rem)" }}
+            style={{ fontSize: theme.displaySize ?? "clamp(2rem, min(11vh, 12vw), 6.5rem)" }}
           >
             {meta.name.split(" ").map((word, i, arr) => {
               const italicize = theme.displayItalicLast ?? true;

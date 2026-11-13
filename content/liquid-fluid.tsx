@@ -14,7 +14,7 @@ export const liquidFluid: StyleContent = {
     radius: "22px",
     display: "font-sans font-extrabold tracking-[-0.02em]",
     displayItalicLast: true,
-    displaySize: "clamp(2.3rem, 7vh, 5rem)",
+    displaySize: "clamp(2.3rem, min(7vh, 9.5vw), 5rem)",
     shadow: "0 24px 60px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.14)",
   },
   what: "Liquid / Fluid UI treats the interface as a living liquid: drifting color fields, morphing blob radii, specular highlights that imply viscosity. Everything feels like it could be tipped, poured or pressed, and motion completes the metaphor rather than decorating it.",

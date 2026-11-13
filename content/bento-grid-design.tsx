@@ -12,7 +12,7 @@ export const bentoGridDesign: StyleContent = {
     accent: "#FF6B5B",
     radius: "20px",
     display: "font-sans font-semibold tracking-[-0.035em]",
-    displaySize: "clamp(2rem, 7vh, 3.6rem)",
+    displaySize: "clamp(2rem, min(7vh, 8.5vw), 3.6rem)",
     displayItalicLast: false,
     shadow: "0 2px 8px rgba(23,23,23,0.04), 0 12px 32px rgba(23,23,23,0.06)",
   },

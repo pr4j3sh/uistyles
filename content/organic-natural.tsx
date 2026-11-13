@@ -13,7 +13,7 @@ export const organicNatural: StyleContent = {
     radius: "16px",
     display: "font-serif tracking-tight",
     displayItalicLast: true,
-    displaySize: "clamp(2.2rem, 6.8vh, 4.5rem)",
+    displaySize: "clamp(2.2rem, min(6.8vh, 9vw), 4.5rem)",
     shadow: "0 1px 2px rgba(46,58,44,0.08), 0 8px 24px rgba(46,58,44,0.12)",
   },
   what: "Organic / Natural UI treats the screen like a page of pressed botanicals: warm cream grounds, moss and terracotta, arches and blobs instead of rectangles, a serif hed with grotesque body, generous margins. It slows the eye down on purpose.",

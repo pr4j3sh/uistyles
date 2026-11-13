@@ -13,7 +13,7 @@ export const pixelArtUi: StyleContent = {
     accent: "#FFCD75",
     radius: "0px",
     display: "font-mono font-bold uppercase tracking-[0.02em]",
-    displaySize: "clamp(1.8rem, 6.5vh, 3.2rem)",
+    displaySize: "clamp(1.8rem, min(6.5vh, 8vw), 3.2rem)",
     displayItalicLast: false,
     shadow: "4px 4px 0 #0F1020",
   },

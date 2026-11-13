@@ -13,7 +13,7 @@ export const retroVintageUi: StyleContent = {
     accent: "#C14A2A",
     radius: "6px",
     display: "font-serif font-medium tracking-[-0.01em]",
-    displaySize: "clamp(2.2rem, 7.5vh, 4.4rem)",
+    displaySize: "clamp(2.2rem, min(7.5vh, 9vw), 4.4rem)",
     displayItalicLast: false,
     shadow: "0 1px 0 rgba(43,30,20,0.06), 4px 4px 0 rgba(43,30,20,0.08)",
   },
