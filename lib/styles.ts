@@ -39,10 +39,10 @@ export const STYLE_GROUPS: StyleGroup[] = [
     name: "Soft & Tactile",
     styles: [
       s("neumorphism", "Neumorphism", "Soft extruded plastic surfaces.", 7, "Soft & Tactile", "available"),
-      s("skeuomorphism", "Skeuomorphism", "Digital objects mimicking physical ones.", 8, "Soft & Tactile"),
-      s("claymorphism", "Claymorphism", "Puffy, playful, 3D-clay surfaces.", 9, "Soft & Tactile"),
-      s("organic-natural", "Organic / Natural UI", "Earth tones, soft edges, calm.", 10, "Soft & Tactile"),
-      s("liquid-fluid", "Liquid / Fluid UI", "Interfaces in continuous motion.", 11, "Soft & Tactile"),
+      s("skeuomorphism", "Skeuomorphism", "Digital objects mimicking physical ones.", 8, "Soft & Tactile", "available"),
+      s("claymorphism", "Claymorphism", "Puffy, playful, 3D-clay surfaces.", 9, "Soft & Tactile", "available"),
+      s("organic-natural", "Organic / Natural UI", "Earth tones, soft edges, calm.", 10, "Soft & Tactile", "available"),
+      s("liquid-fluid", "Liquid / Fluid UI", "Interfaces in continuous motion.", 11, "Soft & Tactile", "available"),
     ],
   },
   {

@@ -6,6 +6,10 @@ import { swissDesign } from "@/content/swiss-design";
 import { editorialDesign } from "@/content/editorial-design";
 import { typographyDriven } from "@/content/typography-driven";
 import { neumorphism } from "@/content/neumorphism";
+import { skeuomorphism } from "@/content/skeuomorphism";
+import { claymorphism } from "@/content/claymorphism";
+import { organicNatural } from "@/content/organic-natural";
+import { liquidFluid } from "@/content/liquid-fluid";
 
 /** Registry of fully-written style contents, keyed by slug. */
 export const STYLE_CONTENTS: Record<string, StyleContent> = {
@@ -16,4 +20,8 @@ export const STYLE_CONTENTS: Record<string, StyleContent> = {
   "editorial-design": editorialDesign,
   "typography-driven": typographyDriven,
   "neumorphism": neumorphism,
+  "skeuomorphism": skeuomorphism,
+  "claymorphism": claymorphism,
+  "organic-natural": organicNatural,
+  "liquid-fluid": liquidFluid,
 };

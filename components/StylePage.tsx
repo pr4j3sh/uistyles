@@ -102,7 +102,7 @@ export function StylePage({
         <div className="relative">
           <h1
             className={`s-text leading-[0.92] tracking-tight ${theme.display ?? "font-serif"}`}
-            style={{ fontSize: "clamp(3rem, 11vh, 6.5rem)" }}
+            style={{ fontSize: theme.displaySize ?? "clamp(3rem, 11vh, 6.5rem)" }}
           >
             {meta.name.split(" ").map((word, i, arr) => {
               const italicize = theme.displayItalicLast ?? true;
