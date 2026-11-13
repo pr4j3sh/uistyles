@@ -22,13 +22,30 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://uistyles.vercel.app";
+const ogTitle = "uistyles: The UI Style Index";
+const ogDescription =
+  "A visual index of 31 UI design styles. Learn the basics of each style (palette, typography, principles) and copy the Tailwind classes for its core components.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "uistyles: The UI Style Index",
+    default: ogTitle,
     template: "%s | uistyles",
   },
-  description:
-    "A visual index of 31 UI design styles. Learn the basics of each style (palette, typography, principles) and copy the Tailwind classes for its core components.",
+  description: ogDescription,
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "uistyles",
+    title: ogTitle,
+    description: ogDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: ogTitle,
+    description: ogDescription,
+  },
 };
 
 export const viewport = {
