@@ -30,9 +30,9 @@ export const STYLE_GROUPS: StyleGroup[] = [
       s("minimalism", "Minimalism", "Less, but better. Radical restraint.", 1, "Foundations & Classics", "available"),
       s("flat-design", "Flat Design", "Pure shapes, zero decoration.", 2, "Foundations & Classics", "available"),
       s("material-design", "Material Design", "Paper, ink and honest elevation.", 3, "Foundations & Classics", "available"),
-      s("swiss-design", "Swiss Design", "Grids, grotesque type, objective clarity.", 4, "Foundations & Classics"),
-      s("editorial-design", "Editorial Design", "The magazine as interface.", 5, "Foundations & Classics"),
-      s("typography-driven", "Typography-driven UI", "Type is the interface.", 6, "Foundations & Classics"),
+      s("swiss-design", "Swiss Design", "Grids, grotesque type, objective clarity.", 4, "Foundations & Classics", "available"),
+      s("editorial-design", "Editorial Design", "The magazine as interface.", 5, "Foundations & Classics", "available"),
+      s("typography-driven", "Typography-driven UI", "Type is the interface.", 6, "Foundations & Classics", "available"),
     ],
   },
   {

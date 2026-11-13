@@ -31,6 +31,10 @@ export const metadata: Metadata = {
     "A visual index of 30 UI design styles. Learn the basics of each style — palette, typography, principles — and copy the Tailwind classes for its core components.",
 };
 
+export const viewport = {
+  themeColor: "#0a0a0a",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
