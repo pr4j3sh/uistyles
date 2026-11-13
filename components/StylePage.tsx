@@ -36,7 +36,7 @@ export function StylePage({
       className="style-scope flex h-full flex-col overflow-hidden"
       style={themeVars}
     >
-      {/* ── Row 1: themed hero band (40vh) ───────────────── */}
+      {/* ── Row 1: themed hero band (30vh mobile / 40vh desktop) ── */}
       <header className="relative flex h-[30vh] min-h-[220px] shrink-0 flex-col justify-between overflow-hidden border-b px-5 pb-4 pt-3 lg:h-[40vh] lg:min-h-[300px] lg:px-8 lg:pb-5 lg:pt-5" style={{ borderColor: "var(--s-line)" }}>
         {/* watermark index */}
         <span

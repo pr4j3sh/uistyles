@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { copyToClipboard } from "@/lib/clipboard";
 
 /** Click-to-copy palette swatch. Copies the hex value. */
 export function PaletteSwatch({
@@ -15,16 +16,7 @@ export function PaletteSwatch({
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(hex);
-    } catch {
-      const ta = document.createElement("textarea");
-      ta.value = hex;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
-    }
+    await copyToClipboard(hex);
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1400);
   };

@@ -23,7 +23,7 @@ export type StyleTheme = {
   shadow?: string;
   /** Class for the hero name. Defaults to font-serif (italic last word). */
   display?: string;
-  /** Hero name font-size, any CSS value. Defaults to clamp(3rem, 11vh, 6.5rem). */
+  /** Hero name font-size, any CSS value. Defaults to clamp(2rem, min(11vh, 12vw), 6.5rem). */
   displaySize?: string;
   /** Italicize the final word of the hero name. Defaults to true. */
   displayItalicLast?: boolean;

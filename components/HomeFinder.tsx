@@ -26,7 +26,7 @@ export function HomeFinder() {
 
   return (
     <div className="hscroll h-full overflow-y-auto">
-      {/* ── Hero: same 40vh band as the style pages ─────── */}
+      {/* ── Hero: 40vh band, paired with the style pages ─── */}
       <header className="relative flex h-[40vh] shrink-0 flex-col justify-between overflow-hidden border-b border-line px-6 pb-5 pt-4 lg:px-12 lg:pt-5">
         <div className="flex items-center justify-between gap-4">
           <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-muted">
