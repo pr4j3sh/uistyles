@@ -1,4 +1,5 @@
 import type { StyleContent } from "@/lib/style-content";
+import { ALL_STYLES, STYLE_MAP } from "@/lib/styles";
 import { minimalism } from "@/content/minimalism";
 import { flatDesign } from "@/content/flat-design";
 import { materialDesign } from "@/content/material-design";
@@ -65,3 +66,15 @@ export const STYLE_CONTENTS: Record<string, StyleContent> = {
   "terminal-ui": terminalUi,
   "grayscale-ui": grayscaleUi,
 };
+
+// ── Registry ↔ catalog consistency ─────────────────────────────────
+// Fail the build loudly when a style is missing its content, or a
+// registry entry points at a slug that doesn't exist in the catalog.
+const missing = ALL_STYLES.filter((style) => !(style.slug in STYLE_CONTENTS)).map((style) => style.slug);
+const unknown = Object.keys(STYLE_CONTENTS).filter((slug) => !STYLE_MAP.has(slug));
+if (missing.length > 0 || unknown.length > 0) {
+  throw new Error(
+    `style-contents registry mismatch. Missing content for: [${missing.join(", ")}]. ` +
+      `Unknown registry slugs: [${unknown.join(", ")}].`,
+  );
+}
