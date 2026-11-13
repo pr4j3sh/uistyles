@@ -42,11 +42,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="h-full overflow-hidden bg-ink text-paper">
+        <a
+          href="#content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:border focus:border-line focus:bg-panel focus:px-4 focus:py-2 focus:font-mono focus:text-[10px] focus:uppercase focus:tracking-[0.25em] focus:text-paper"
+        >
+          Skip to content
+        </a>
         <CustomCursor />
         <div className="flex h-full flex-col lg:flex-row">
           <Sidebar />
           <MobileBar />
-          <main className="h-full min-h-0 flex-1 min-w-0 overflow-hidden">{children}</main>
+          <main id="content" className="h-full min-h-0 flex-1 min-w-0 overflow-hidden">{children}</main>
         </div>
       </body>
     </html>

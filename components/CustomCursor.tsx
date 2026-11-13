@@ -14,7 +14,9 @@ export function CustomCursor() {
 
   useEffect(() => {
     const fine = window.matchMedia("(pointer: fine)");
-    if (!fine.matches) return;
+    // respect users who prefer reduced motion: no hidden cursor, no lerp
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!fine.matches || reduced.matches) return;
 
     document.documentElement.classList.add("custom-cursor");
 

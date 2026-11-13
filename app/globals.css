@@ -67,7 +67,7 @@ body {
   color: color-mix(in srgb, var(--s-text) 62%, transparent);
 }
 .s-faint {
-  color: color-mix(in srgb, var(--s-text) 38%, transparent);
+  color: color-mix(in srgb, var(--s-text) 48%, transparent);
 }
 .s-accent {
   color: var(--s-accent);

@@ -36,7 +36,7 @@ export function PaletteSwatch({
       data-cursor
       data-cursor-label={copied ? "Copied" : "Copy"}
       title={`Copy ${hex}`}
-      className="group text-left focus-visible:outline-none"
+      className="group rounded-sm text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper/70 focus-visible:outline-solid"
       aria-label={`Copy ${hex}`}
     >
       <div
