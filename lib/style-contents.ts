@@ -10,6 +10,25 @@ import { skeuomorphism } from "@/content/skeuomorphism";
 import { claymorphism } from "@/content/claymorphism";
 import { organicNatural } from "@/content/organic-natural";
 import { liquidFluid } from "@/content/liquid-fluid";
+import { brutalism } from "@/content/brutalism";
+import { neobrutalism } from "@/content/neobrutalism";
+import { memphisDesign } from "@/content/memphis-design";
+import { maximalism } from "@/content/maximalism";
+import { y2kDesign } from "@/content/y2k-design";
+import { glassmorphism } from "@/content/glassmorphism";
+import { auroraUi } from "@/content/aurora-ui";
+import { gradientUi } from "@/content/gradient-ui";
+import { darkUi } from "@/content/dark-ui";
+import { lightUi } from "@/content/light-ui";
+import { cyberpunkUi } from "@/content/cyberpunk-ui";
+import { synthwaveUi } from "@/content/synthwave-ui";
+import { retroVintageUi } from "@/content/retro-vintage-ui";
+import { pixelArtUi } from "@/content/pixel-art-ui";
+import { futuristicUi } from "@/content/futuristic-ui";
+import { bentoGridDesign } from "@/content/bento-grid-design";
+import { monochromaticDesign } from "@/content/monochromatic-design";
+import { industrialUi } from "@/content/industrial-ui";
+import { terminalUi } from "@/content/terminal-ui";
 
 /** Registry of fully-written style contents, keyed by slug. */
 export const STYLE_CONTENTS: Record<string, StyleContent> = {
@@ -24,4 +43,23 @@ export const STYLE_CONTENTS: Record<string, StyleContent> = {
   "claymorphism": claymorphism,
   "organic-natural": organicNatural,
   "liquid-fluid": liquidFluid,
+  "brutalism": brutalism,
+  "neobrutalism": neobrutalism,
+  "memphis-design": memphisDesign,
+  "maximalism": maximalism,
+  "y2k-design": y2kDesign,
+  "glassmorphism": glassmorphism,
+  "aurora-ui": auroraUi,
+  "gradient-ui": gradientUi,
+  "dark-ui": darkUi,
+  "light-ui": lightUi,
+  "cyberpunk-ui": cyberpunkUi,
+  "synthwave-ui": synthwaveUi,
+  "retro-vintage-ui": retroVintageUi,
+  "pixel-art-ui": pixelArtUi,
+  "futuristic-ui": futuristicUi,
+  "bento-grid-design": bentoGridDesign,
+  "monochromatic-design": monochromaticDesign,
+  "industrial-ui": industrialUi,
+  "terminal-ui": terminalUi,
 };

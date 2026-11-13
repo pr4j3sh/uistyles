@@ -4,21 +4,29 @@ import { STYLE_GROUPS, ALL_STYLES } from "@/lib/styles";
 export default function Home() {
   return (
     <div className="hscroll h-full overflow-y-auto">
-      {/* ── Hero ─────────────────────────────────────────── */}
-      <header className="relative border-b border-line px-6 pb-10 pt-14 lg:px-12 lg:pt-20">
-        <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-muted">
-          The UI Style Index — Vol. 01
-        </p>
-        <h1 className="mt-6 max-w-5xl font-serif text-[13vw] leading-[0.92] tracking-tight text-paper sm:text-8xl lg:text-[7.5rem]">
+      {/* ── Hero — same 40vh band as the style pages ─────── */}
+      <header className="relative flex h-[40vh] shrink-0 flex-col justify-between overflow-hidden border-b border-line px-6 pb-5 pt-4 lg:px-12 lg:pt-5">
+        <div className="flex items-center justify-between gap-4">
+          <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-muted">
+            The UI Style Index — Vol. 01
+          </p>
+          <span className="hidden font-mono text-[9px] uppercase tracking-[0.3em] text-muted sm:block">
+            Styles / 30
+          </span>
+        </div>
+        <h1
+          className="max-w-3xl font-serif leading-[0.92] tracking-tight text-paper"
+          style={{ fontSize: "clamp(1.9rem, min(10vh, 10.5vw), 6rem)" }}
+        >
           Every interface has an <em className="italic text-white/70">accent.</em>
         </h1>
-        <div className="mt-8 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-          <p className="max-w-md text-[15px] leading-relaxed text-white/60">
+        <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
+          <p className="max-w-md text-[12px] leading-snug text-white/60 sm:text-[14px] sm:leading-relaxed">
             uistyles is a field guide to 30 interface design styles — from Swiss
             minimalism to synthwave. Each page breaks down the essentials, shows the
             core components live, and hands you the Tailwind classes.
           </p>
-          <div className="flex items-center gap-6 font-mono text-[9px] uppercase leading-loose tracking-[0.25em] text-muted">
+          <div className="hidden items-center gap-6 font-mono text-[9px] uppercase leading-loose tracking-[0.25em] text-muted sm:flex">
             <span>30 styles</span>
             <span className="h-3 w-px bg-white/15" />
             <span>6 families</span>
