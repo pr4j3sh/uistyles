@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useSyncExternalStore } from "react";
 import { STYLE_GROUPS, ALL_STYLES } from "@/lib/styles";
+import { searchStyles } from "@/lib/search";
 
 const STORAGE_KEY = "uistyles-sidebar-collapsed";
 const CHANGE_EVENT = "uistyles:sidebar";
@@ -42,10 +43,16 @@ export function Sidebar() {
   };
 
   const q = query.trim().toLowerCase();
+  // rank the whole catalog once with the shared tag search, then keep group order
+  const hits = q ? new Set(searchStyles(q).map((m) => m.style.slug)) : null;
   const groups = STYLE_GROUPS.map((group) => ({
     ...group,
     styles: group.styles.filter(
-      (style) => !q || style.name.toLowerCase().includes(q) || style.slug.includes(q),
+      (style) =>
+        !hits ||
+        hits.has(style.slug) ||
+        style.name.toLowerCase().includes(q) ||
+        style.slug.includes(q),
     ),
   })).filter((group) => group.styles.length > 0);
 
@@ -96,7 +103,7 @@ export function Sidebar() {
         >
           {collapsed ? (
             <span className="block text-center font-serif text-[26px] leading-none text-paper">
-              u<span className="italic text-white/60">.</span>
+              u<span className="italic text-white/75">.</span>
             </span>
           ) : (
             <>
@@ -201,7 +208,7 @@ export function Sidebar() {
                             ? collapsed
                               ? "text-ink"
                               : "text-paper"
-                            : "text-muted/70 group-hover:text-muted"
+                            : "text-muted/85 group-hover:text-muted"
                         }`}
                       >
                         {String(style.index).padStart(2, "0")}
@@ -215,7 +222,7 @@ export function Sidebar() {
                             className={`h-1 w-1 rounded-full transition-colors ${
                               style.status === "available"
                                 ? "bg-paper"
-                                : "bg-white/15 group-hover:bg-white/30"
+                                : "bg-white/25 group-hover:bg-white/40"
                             }`}
                             title={style.status === "available" ? "Published" : "Coming soon"}
                           />
@@ -236,7 +243,7 @@ export function Sidebar() {
       {/* footer */}
       <div className={`shrink-0 border-t border-line ${collapsed ? "px-2 py-4" : "px-6 py-4"}`}>
         {collapsed ? (
-          <p className="text-center font-mono text-[9px] text-muted/70" title="uistyles © 2026">
+          <p className="text-center font-mono text-[9px] text-muted/85" title="uistyles © 2026">
             ©26
           </p>
         ) : (
@@ -247,7 +254,7 @@ export function Sidebar() {
               rel="noreferrer"
               data-cursor
               data-cursor-label="GitHub"
-              className="group flex items-baseline justify-between font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/70 transition-colors hover:text-paper"
+              className="group flex items-baseline justify-between font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/85 transition-colors hover:text-paper"
             >
               Source
               <span className="transition-transform group-hover:translate-x-0.5">↗</span>
@@ -258,12 +265,12 @@ export function Sidebar() {
               rel="noreferrer"
               data-cursor
               data-cursor-label="Profile"
-              className="group flex items-baseline justify-between font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/70 transition-colors hover:text-paper"
+              className="group flex items-baseline justify-between font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/85 transition-colors hover:text-paper"
             >
               pr4j3sh
               <span className="transition-transform group-hover:translate-x-0.5">↗</span>
             </a>
-            <p className="pt-1 font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/40">
+            <p className="pt-1 font-mono text-[9px] uppercase leading-relaxed tracking-[0.2em] text-muted/60">
               uistyles © 2026
             </p>
           </div>

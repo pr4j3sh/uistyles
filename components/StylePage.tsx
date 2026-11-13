@@ -37,7 +37,7 @@ export function StylePage({
       style={themeVars}
     >
       {/* ── Row 1: themed hero band (40vh) ───────────────── */}
-      <header className="relative flex h-[30vh] shrink-0 flex-col justify-between overflow-hidden border-b px-5 pb-4 pt-3 lg:h-[40vh] lg:px-8 lg:pb-5 lg:pt-5" style={{ borderColor: "var(--s-line)" }}>
+      <header className="relative flex h-[30vh] min-h-[220px] shrink-0 flex-col justify-between overflow-hidden border-b px-5 pb-4 pt-3 lg:h-[40vh] lg:min-h-[300px] lg:px-8 lg:pb-5 lg:pt-5" style={{ borderColor: "var(--s-line)" }}>
         {/* watermark index */}
         <span
           aria-hidden
@@ -115,6 +115,23 @@ export function StylePage({
             })}
           </h1>
         </div>
+
+        {/* tags: jump to the home finder pre-filled */}
+        {meta.tags.length > 0 && (
+          <div className="hscroll relative flex gap-1.5 overflow-x-auto whitespace-nowrap sm:flex-wrap sm:overflow-visible sm:whitespace-normal">
+            {meta.tags.map((tag) => (
+              <Link
+                key={tag}
+                href={`/?q=${encodeURIComponent(tag)}`}
+                data-cursor
+                data-cursor-label={tag}
+                className="s-chip shrink-0 rounded-full px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.18em] transition-opacity hover:opacity-70 sm:shrink"
+              >
+                {tag}
+              </Link>
+            ))}
+          </div>
+        )}
 
         {/* bottom line: tagline + scroll cue */}
         <div className="relative flex items-end justify-between gap-6">
