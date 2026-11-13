@@ -1,69 +1,84 @@
-import Image from "next/image";
+import Link from "next/link";
+import { STYLE_GROUPS, ALL_STYLES } from "@/lib/styles";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="hscroll h-full overflow-y-auto">
+      {/* ── Hero ─────────────────────────────────────────── */}
+      <header className="relative border-b border-line px-6 pb-10 pt-14 lg:px-12 lg:pt-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-muted">
+          The UI Style Index — Vol. 01
+        </p>
+        <h1 className="mt-6 max-w-5xl font-serif text-[13vw] leading-[0.92] tracking-tight text-paper sm:text-8xl lg:text-[7.5rem]">
+          Every interface has an <em className="italic text-white/70">accent.</em>
+        </h1>
+        <div className="mt-8 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <p className="max-w-md text-[15px] leading-relaxed text-white/60">
+            uistyles is a field guide to 30 interface design styles — from Swiss
+            minimalism to synthwave. Each page breaks down the essentials, shows the
+            core components live, and hands you the Tailwind classes.
           </p>
+          <div className="flex items-center gap-6 font-mono text-[9px] uppercase leading-loose tracking-[0.25em] text-muted">
+            <span>30 styles</span>
+            <span className="h-3 w-px bg-white/15" />
+            <span>6 families</span>
+            <span className="h-3 w-px bg-white/15" />
+            <span>Zero fluff</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* ── The index — bento of all 30 styles ─────────────── */}
+      <div className="grid grid-cols-2 gap-3 p-3 sm:grid-cols-4 lg:grid-cols-6">
+        {ALL_STYLES.map((style, i) => {
+          // bento rhythm: every 7th cell is wide
+          const wide = i % 7 === 0;
+          return (
+            <Link
+              key={style.slug}
+              href={`/styles/${style.slug}`}
+              data-cursor
+              data-cursor-label="View"
+              className={`group relative flex min-h-[150px] flex-col justify-between overflow-hidden rounded-lg border border-line bg-panel p-4 transition-colors duration-300 hover:border-paper hover:bg-paper ${
+                wide ? "col-span-2" : ""
+              }`}
+            >
+              <div className="flex items-start justify-between">
+                <span className="font-mono text-[10px] tabular-nums text-muted transition-colors group-hover:text-ink/60">
+                  {String(style.index).padStart(2, "0")}
+                </span>
+                <span
+                  className={`h-1.5 w-1.5 rounded-full transition-colors ${
+                    style.status === "available" ? "bg-paper group-hover:bg-ink" : "bg-white/15 group-hover:bg-ink/25"
+                  }`}
+                />
+              </div>
+              <div>
+                <h2
+                  className={`font-serif leading-[1.02] tracking-tight text-paper transition-colors group-hover:text-ink ${
+                    wide ? "text-3xl" : "text-xl"
+                  }`}
+                >
+                  {style.name}
+                </h2>
+                <p className="mt-1.5 line-clamp-2 text-[10.5px] leading-snug text-white/45 transition-colors group-hover:text-ink/60">
+                  {style.tagline}
+                </p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* ── Colophon ─────────────────────────────────────── */}
+      <footer className="flex flex-col justify-between gap-4 border-t border-line px-6 py-8 font-mono text-[9px] uppercase leading-loose tracking-[0.25em] text-muted sm:flex-row lg:px-12">
+        <span>uistyles — the ui style index</span>
+        <div className="flex flex-wrap gap-x-6 gap-y-1">
+          {STYLE_GROUPS.map((g) => (
+            <span key={g.name}>{g.name}</span>
+          ))}
         </div>
-      </main>
+      </footer>
     </div>
   );
 }
