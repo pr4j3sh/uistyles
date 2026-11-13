@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CustomCursor } from "@/components/CustomCursor";
 import { Sidebar } from "@/components/Sidebar";
 import { MobileBar } from "@/components/MobileBar";
@@ -71,6 +73,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <MobileBar />
           <main id="content" className="h-full min-h-0 flex-1 min-w-0 overflow-hidden">{children}</main>
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
